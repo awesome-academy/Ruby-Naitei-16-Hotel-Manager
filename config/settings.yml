@@ -1,0 +1,41 @@
+enabled_locales: ["en", "vn"]
+client:
+  host: "localhost:3000"
+validation:
+  name:
+    length:
+      max: 50
+  email:
+    length:
+      max: 50
+    valid_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+    pwd_reset_expired_hours: 2
+  password:
+    length:
+      min: 6
+  phone:
+    length: 10
+  description:
+    length:
+      max: 200
+  rating:
+    min: 0
+    max: 5
+  image:
+    max_size: 5
+    type: ["image/jpeg", "image/gif", "image/png"]
+    type_accepted: "image/jpeg,image/gif,image/png"
+  item:
+    min: 0
+avatar:
+  size:
+    profile: 80
+    list: 50
+    follower: 30
+user:
+  admin:
+    name: "Tran Anh Tuan"
+    email: "tatuan19@gmail.com"
+    password: "123456"
+  faker:
+    password: "password"
