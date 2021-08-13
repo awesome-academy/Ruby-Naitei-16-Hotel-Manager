@@ -1,0 +1,112 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'color.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.tm-header {
+  background: $background;
+  display: block;
+  padding: 20px;
+}
+
+.tm-logo {
+  align-content: center;
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.tm-nav {
+  max-width: 90%;
+  border: 2px solid $grey;
+  display: block;
+  margin: 30px auto 5px auto;
+}
+
+.tm-nav div {
+  display: table;
+  padding: 10px;
+  margin: 0px auto;
+}
+
+.tm-nav div ul li {
+  display:inline-block;
+}
+
+.tm-nav div ul li a {
+  font-size: 1.8vmax;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: $white;
+  line-height: 50px;
+}
+
+.tm-nav div ul li a:hover {
+  color: $brown;
+}
+
+/* footer */
+
+.tm-footer {
+  background: $background;
+  display: block;
+  padding: 20px;
+  position: relative;
+}
+
+.tm-us {
+  display: inline-table;
+  max-width: 30%;
+  width: 30%;
+  margin: 2% 0 2% 4%
+}
+
+.tm-address {
+  display: inline-table;
+  max-width: 30%;
+  width: 30%;
+   margin: 2% 0 2% 25%
+}
+
+.tm-us .bold, .tm-address .bold {
+  color: $brown;
+  font-size: 1.5vw;
+  font-weight: 700;
+  padding-bottom: 4%;
+}
+
+.tm-us p, .tm-address p {
+  color: $white;
+  font-size: 1.2vw;
+}
+
+.tm-media {
+   display: inline;
+  margin: 0 0 0 59%;
+}
+.tm-media img {
+  margin: 0.5%;
+  width: 3%;
+  height: auto;
+}
+
+.tm-up {
+  position: absolute;
+  top: 20%;
+  right: 3%;
+  width: 3%;
+  height: auto;
+}
+
+.tm-review:focus {
+  outline: none;
+}
+
+.tm-revcon:focus {
+  outline: none;
+}
