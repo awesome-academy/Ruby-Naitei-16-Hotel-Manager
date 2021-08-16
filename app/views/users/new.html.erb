@@ -1,0 +1,23 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @user, url: users_path do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <%= f.label :gender %>
+      <%= f.select :gender, select_gender, prompt: t(".select") %>
+      <%= f.label :phone %>
+      <%= f.text_field :phone %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= f.label :password_confirmation%>
+      <%= f.password_field :password_confirmation %>
+      <%= f.submit t(".submit"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
