@@ -1,6 +1,6 @@
 en:
-  english: "English"
-  vietnamese: "Vietnamese"
+  en: "EN"
+  vi: "VN"
   layouts:
     root_title: "Management Hotel"
     header:
@@ -9,6 +9,11 @@ en:
       room: "Room"
       booking: "Booking"
       contact: "Contact"
+      profile: "Profile"
+      setting: "Setting"
+      logout: "Log out"
+      account: "Account"
+      login: "Log in"
     footer:
       about_us: "About us"
       about_descrip: "We provide a luxorious stay with various value
@@ -25,3 +30,19 @@ en:
       title: "Help"
       welcome: "This is contact page"
       detail: "Static page of home will display lateer"
+  sessions:
+    new:
+      new_user: "New User?"
+      login: "Log in"
+      sign_up: "Sign up now!"
+      remember_me: "Remember me on this computer"
+      forgot_password: "Forgot Password?"
+    create:
+      required_activate_email: "Account not activated.
+                                Check your email for the activation link."
+      login_fail: "Invalid email/password combination"
+  helpers:
+    label:
+      session:
+        email: "Email"
+        password: "Password"
