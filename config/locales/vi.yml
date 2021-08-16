@@ -1,6 +1,6 @@
 vi:
-  english: "Tiếng Anh"
-  vietnamese: "Tiếng việt"
+  en: "EN"
+  vi: "VN"
   layouts:
     root_title: "Management Hotel"
     header:
@@ -9,6 +9,11 @@ vi:
       room: "Loại phòng"
       booking: "Đặt phòng"
       contact: "Liên hệ"
+      profile: "Thông tin"
+      setting: "Cài đặt"
+      logout: "Đăng xuất"
+      account: "Tài khoản"
+      login: "Đăng nhập"
     footer:
       about_us: "Về chúng tôi"
       about_descrip: "Chúng tôi cung cấp một trải nghiệm về
@@ -25,3 +30,19 @@ vi:
       title: "Contact"
       welcome: "Đây là trang chủ liên lạc của chúng tôi "
       detail: "NỘi dung sẽ được cập nhập sớm nhất"
+  sessions:
+    new:
+      new_user: "Người dùng mới?"
+      login: "Đăng nhập"
+      sign_up: "Đăng ký ngay!"
+      remember_me: "Ghi nhớ đăng nhập"
+      forgot_password: "Quên mật khẩu?"
+    create:
+      required_activate_email: "Tài khoản chưa được xác thực.
+                                Kiểm tra email của bạn để hoàn thành xác thực."
+      login_fail: "Email hoặc mật khẩu không đúng!"
+  helpers:
+    label:
+      session:
+        email: "Email"
+        password: "Mật khẩu"
