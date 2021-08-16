@@ -41,8 +41,31 @@ vi:
       required_activate_email: "Tài khoản chưa được xác thực.
                                 Kiểm tra email của bạn để hoàn thành xác thực."
       login_fail: "Email hoặc mật khẩu không đúng!"
+  users:
+    new:
+      title: "Đăng ký"
+      male: "Nam"
+      female: "Nữ"
+      select: "Chọn giới tính"
+      submit: "Tạo tài khoản của tôi"
+    create:
+      success: "Đăng ký thành công"
+      fail: "Đăng ký thất bại"
+    show:
+      not_found: "Không tìm thấy người dùng"
+      name: "Tên người dùng: "
+      email: "Email: "
+      gender: "Giới tính: "
+      phone: "Số điện thoại: "
   helpers:
     label:
       session:
         email: "Email"
         password: "Mật khẩu"
+      user:
+        name: "Tên người dùng"
+        email: "Email"
+        gender: "Giới tính"
+        phone: "Số điện thoại"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"

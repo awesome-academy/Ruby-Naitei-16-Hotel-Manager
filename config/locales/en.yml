@@ -41,8 +41,35 @@ en:
       required_activate_email: "Account not activated.
                                 Check your email for the activation link."
       login_fail: "Invalid email/password combination"
+  users:
+    new:
+      title: "Sign up"
+      male: "Male"
+      female: "Female"
+      select: "Select gender"
+      submit: "Create my account"
+    create:
+      success: "Sign up success"
+      fail: "Sign up fail"
+    show:
+      not_found: "User not found"
+      name: "User name: "
+      email: "Email: "
+      gender: "Gender: "
+      phone: "Phone number: "
   helpers:
     label:
       session:
         email: "Email"
         password: "Password"
+      user:
+        name: "User Name"
+        email: "Email"
+        gender: "Gender"
+        phone: "Phone"
+        password: "Password"
+        password_confirmation: "Confirm Password"
+  shared:
+    error_messages:
+      part1: "This page has"
+      part2: "errors."

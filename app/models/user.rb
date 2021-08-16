@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :reviews, as: :commentable, dependent: :destroy
 
   enum gender: {female: 0, male: 1}
+  PERMITTED = %i(name email gender phone password password_confirmation).freeze
 
   validates :name, presence: true,
                    length: {maximum: Settings.validation.name.length.max}
@@ -49,7 +50,6 @@ class User < ApplicationRecord
   end
 
   private
-
   def downcase_email
     email.downcase!
   end
