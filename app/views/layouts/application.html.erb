@@ -1,9 +1,7 @@
-<%= link_to t("english"), locale:"en" %>
-<%= link_to t("vietnamese"), locale:"vi" %>
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title yield :title %> | <%= t "layouts.root_title" %></title>
+    <title><%= full_title yield :title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,9 +11,9 @@
 
   <body>
     <%= render "layouts/header" %>
-    <div class="container">
+    <div class="content-area">
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <div class="flash-alert alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <%= yield %>
     </div>

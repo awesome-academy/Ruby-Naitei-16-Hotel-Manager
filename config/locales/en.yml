@@ -5,9 +5,10 @@ en:
     root_title: "Management Hotel"
     header:
       home: "Home"
-      explore: "Explore"
-      room: "Room"
-      booking: "Booking"
+      accomodation: "Accomodation"
+      review: "Reviews"
+      rooms: "Rooms"
+      staffs: "Staffs"
       contact: "Contact"
       profile: "Profile"
       setting: "Setting"
@@ -30,6 +31,25 @@ en:
       title: "Help"
       welcome: "This is contact page"
       detail: "Static page of home will display lateer"
+    banner:
+      subtitle1: "Away from monotonous life"
+      subtitle2: "Relax Your Mind"
+      content_html: "If you are looking at blank cassettes on the web,
+                you may be very confused at the<br> difference in price.
+                You may see some for as low as $.17 each."
+      signup: "Sign up now!"
+    accomodation:
+      title: "Hotel Accomodation"
+      subtitle: "We all live in an age that belongs to the young at heart.
+                Life that is becoming extremely fast."
+    testimonial:
+      title: "Reviews of the staff"
+      subtitle: "Our staff are young, enthusiastic people;
+                professional, dedicated to the job."
+    review:
+      title: "Latest Reviews"
+      subtitle: "The article reviews from customers is the motivation
+                for us to continue to grow."
   sessions:
     new:
       new_user: "New User?"
@@ -69,7 +89,14 @@ en:
         phone: "Phone"
         password: "Password"
         password_confirmation: "Confirm Password"
+  activerecord:
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirm"
   shared:
     error_messages:
       part1: "This page has"
-      part2: "errors."
+      part2: "errors"
