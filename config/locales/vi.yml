@@ -1,0 +1,27 @@
+vi:
+  english: "Tiếng Anh"
+  vietnamese: "Tiếng việt"
+  layouts:
+    root_title: "Management Hotel"
+    header:
+      home: "Trang chủ"
+      explore: "Khám phá"
+      room: "Loại phòng"
+      booking: "Đặt phòng"
+      contact: "Liên hệ"
+    footer:
+      about_us: "Về chúng tôi"
+      about_descrip: "Chúng tôi cung cấp một trải nghiệm về
+                      dịch vụ tốt và miễn phí . Chúng tôi chắc chắn
+                      các bạn sẽ quay lại sau khi trải nghiệm."
+      address: "Địa chỉ"
+      address_: "Bách Khoa univesity"
+  static_pages:
+    home:
+      title: "Home"
+      welcome: "Đây là trang chủ của chúng tôi"
+      detail: "NỘi dung sẽ được cập nhập sớm nhất"
+    help:
+      title: "Contact"
+      welcome: "Đây là trang chủ liên lạc của chúng tôi "
+      detail: "NỘi dung sẽ được cập nhập sớm nhất"

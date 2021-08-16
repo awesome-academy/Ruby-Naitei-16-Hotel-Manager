@@ -1,8 +1,9 @@
+<%= link_to t("english"), locale:"en" %>
+<%= link_to t("vietnamese"), locale:"vi" %>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubyNaitei16HotelManager</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= full_title yield :title %> | <%= t "layouts.root_title" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
