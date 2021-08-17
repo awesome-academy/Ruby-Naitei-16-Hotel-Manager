@@ -1,42 +1,71 @@
-<header class="tm-header">
-  <img class="tm-logo" src="/images/Majestic_Hotel_hd.png" alt="Majestic Hotel">
-  <nav class="tm-nav" >
-    <div>
-      <ul>
-        <li class="tm-list">
-          <%= link_to t(".home"), home_path %>
-        </li>
-        <li class="tm-list">
-          <%= link_to t(".explore"), "#" %>
-        </li>
-        <li class="tm-list">
-          <%= link_to t(".room"), "#" %>
-        </li>
-        <li class="tm-list">
-          <%= link_to t(".booking"), "#" %>
-        </li>
-        <li>
-          <%= link_to t(".contact"), help_path %>
-        </li>
-        <% if logged_in? %>
-          <li class="dropdown">
-            <%= link_to "#", class:"dropdown-toggle", "data-toggle": "dropdown" do %>
-              <%= t ".account" %>
-              <b class="caret"></b>
+<header class="header_area">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <%= link_to home_path, class:"navbar-brand logo_h" do %>
+        <%= image_tag Settings.src.logo, :alt => "Logo" %>
+      <% end %>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+        <ul class="nav navbar-nav menu_nav ml-auto">
+          <li class="nav-item">
+            <%= link_to t(".home"), home_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".accomodation"), "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item submenu dropdown">
+            <%= link_to "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" do %>
+              <%= t ".review" %>
             <% end %>
             <ul class="dropdown-menu">
-              <li><%= link_to t(".profile"), current_user %></li>
-              <li><%= link_to t(".setting"), "#" %></li>
-              <li class="divider"></li>
-              <li><%= link_to t(".logout"), logout_path, method: :delete %></li>
+              <li class="nav-item">
+                <%= link_to t(".staffs"), "#", class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to t(".rooms"), "#", class: "nav-link" %>
+              </li>
             </ul>
           </li>
-        <% else %>
-          <li><%= link_to t(".login"), login_path %></li>
-        <% end %>
-        <li><%= link_to t("en"), locale:"en" %></li>
-        <li><%= link_to t("vi"), locale:"vi" %></li>
+          <% if logged_in? %>
+            <li class="nav-item submenu dropdown">
+              <%= link_to "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" do %>
+                <%= t ".account" %>
+              <% end %>
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <%= link_to t(".profile"), "#current_user", class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to t(".setting"), "#", class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to t(".logout"), logout_path, method: :delete, class: "nav-link" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to t(".login"), login_path, class: "nav-link" %>
+            </li>
+          <% end %>
+          <li class="nav-item">
+            <%= link_to t(".contact"), help_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+      <ul class="nav navbar-nav menu_nav">
+       <li class="nav-item">
+          <div class="nav-link flag">
+            <%= link_to image_tag("en.png", alt: "Logo"), locale:"en" %>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link flag">
+            <%= link_to image_tag("vi.png", alt: "Logo"), locale:"vi" %>
+          </div>
+        </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>

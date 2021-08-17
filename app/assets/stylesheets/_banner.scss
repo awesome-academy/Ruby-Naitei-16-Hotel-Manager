@@ -1,0 +1,88 @@
+@import 'variables';
+
+.banner_area {
+  background: $banner_bgr;
+  position: relative;
+  z-index: 1;
+
+  .bg-parallax {
+    background: url('banner_bg.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.30;
+  }
+
+  .position {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+
+.booking_table {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 125%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.banner_content {
+  color: $white;
+  margin-bottom: 94px;
+
+  h6 {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px 0px 20px;
+  }
+}
+
+/*=========== breadcrumb_area css =============*/
+.breadcrumb_area {
+  position: relative;
+  padding: 172px 0px 84px;
+  background: $dark_blue;
+  z-index: 1;
+  overflow: hidden;
+
+  .bg-parallax {
+    background: url('about_banner.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.30;
+    z-index: -1;
+  }
+}
+
+.page-cover-tittle {
+  display: block;
+  font-size: 36px;
+  line-height: 45px;
+  color: $white;
+}

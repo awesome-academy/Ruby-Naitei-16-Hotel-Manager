@@ -5,9 +5,10 @@ vi:
     root_title: "Management Hotel"
     header:
       home: "Trang chủ"
-      explore: "Khám phá"
-      room: "Loại phòng"
-      booking: "Đặt phòng"
+      accomodation: "Đặt phòng"
+      rooms: "Phòng ở"
+      staffs: "Nhân viên"
+      review: "Đánh giá"
       contact: "Liên hệ"
       profile: "Thông tin"
       setting: "Cài đặt"
@@ -30,6 +31,26 @@ vi:
       title: "Contact"
       welcome: "Đây là trang chủ liên lạc của chúng tôi "
       detail: "NỘi dung sẽ được cập nhập sớm nhất"
+    banner:
+      subtitle1: "Rời xa cuộc sống đơn điệu"
+      subtitle2: "Thư giãn tâm trí của bạn"
+      content_html: "Nếu bạn đang xem các băng cát-xét trống trên web,
+                    bạn có thể bối rối về sự khác biệt<br> về giá.
+                    Bạn có thể thấy một số băng giá thấp tới 0,17 đô la."
+      signup: "Đăng ký ngay!"
+    accomodation:
+      title: "Chỗ ở khách sạn"
+      subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về
+                những người trẻ.
+                Cuộc sống đang trở nên cực kỳ nhanh chóng."
+    testimonial:
+      title: "Đánh giá về đội ngũ nhân viên"
+      subtitle: "Đội ngũ nhân viên của chúng tôi là những người trẻ trung, nhiệt huyết;
+                giỏi về chuyên môn, tận tình với công việc."
+    review:
+      title: "Nhận xét mới nhất"
+      subtitle: "Những bài viết đánh giá từ khách hàng là
+                động lực để chúng tôi tiếp tục phát triển."
   sessions:
     new:
       new_user: "Người dùng mới?"
@@ -69,3 +90,14 @@ vi:
         phone: "Số điện thoại"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Mật khẩu xác nhận"
+  shared:
+    error_messages:
+      part1: "Trang này có"
+      part2: "lỗi"
