@@ -237,3 +237,47 @@ input {
   margin-left: 0;
   width: auto;
 }
+
+.large-padding-top {
+  padding-top: 100px;
+}
+
+/* scroll only image path*/
+.wrapper {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.right-content {
+  width: 65vw;
+  overflow-x: scroll;
+  flex-grow: 1;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    margin: 50px 100px;
+    
+  }
+}
+
+.left-content {
+  width: 35vw;
+  list-style: none;
+  flex-grow: 1;
+
+  * {
+    margin-left: 100px;
+  }
+
+  ul {
+    margin-left: 0px;
+    list-style: none;
+  }
+}

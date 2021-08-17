@@ -77,18 +77,45 @@ en:
       email: "Email: "
       gender: "Gender: "
       phone: "Phone number: "
+  rooms:
+    new:
+      title: "Create Room"
+      select: "Select room type"
+      submit: "Create room"
+    create:
+      success: "Create room success"
+      fail: "Create room fail"
+    show:
+      title: "Room "
+      type: "Room type: "
+      bed: "Bed num: "
+      air_conditioner: "Has air conditioner"
+      cost: "Cost: "
+      can_book: "Can book"
+      book: "Book this room"
+      booked: "Booked"
+      per_day: "$/day"
+      not_found: "Not found this room"
+    warning: "You can not access this page"
+    invalid_format: "You can upload images only"
+    required_size: "Maximum image size is 5MB"
   helpers:
     label:
       session:
-        email: "Email"
-        password: "Password"
+        email: "Email *"
+        password: "Password *"
       user:
-        name: "User Name"
-        email: "Email"
-        gender: "Gender"
-        phone: "Phone"
-        password: "Password"
-        password_confirmation: "Confirm Password"
+        name: "User Name *"
+        email: "Email *"
+        gender: "Gender *"
+        phone: "Phone *"
+        password: "Password *"
+        password_confirmation: "Confirm Password *"
+      room:
+        room_number: "Room number *"
+        room_type_id: "Room type *"
+        description: "Room description *"
+        images: "Room images"
   activerecord:
     attributes:
       user:
