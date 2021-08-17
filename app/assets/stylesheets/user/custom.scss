@@ -1,7 +1,11 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'variables';
-
+@import 'accomodation';
+@import 'banner';
+@import 'button';
+@import 'header';
+@import 'testimonial';
 /* ==== Predefine ====*/
 .list_style {
   list-style: none;
