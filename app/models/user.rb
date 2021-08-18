@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :reviews, as: :commentable, dependent: :destroy
 
   enum gender: {female: 0, male: 1}
+  enum role: {customer: -1, staff: 0, admin: 1}
   PERMITTED = %i(name email gender phone password password_confirmation).freeze
 
   validates :name, presence: true,

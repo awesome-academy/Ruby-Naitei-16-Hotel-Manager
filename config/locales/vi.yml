@@ -78,18 +78,45 @@ vi:
       email: "Email: "
       gender: "Giới tính: "
       phone: "Số điện thoại: "
+  rooms:
+    new:
+      title: "Tạo phòng"
+      select: "Chọn kiểu phòng"
+      submit: "Tạo phòng mới"
+    create:
+      success: "Tạo phòng thành công"
+      fail: "Tạo phòng thất bại"
+    show:
+      title: "Phòng "
+      type: "Kiểu phòng: "
+      bed: "Số giường: "
+      air_conditioner: "Có điều hòa"
+      cost: "Giá: "
+      can_book: "Có thể đặt phòng"
+      book: "Đặt phòng này"
+      booked: "Đã đặt"
+      per_day: "$/ngày"
+      not_found: "Không tìm thấy phòng này"
+    warning: "Bạn không có quyền truy cập trang này"
+    invalid_format: "Bạn chỉ có thể tải lên ảnh"
+    required_size: "Kích cỡ tối đa của ảnh là 5MB"
   helpers:
     label:
       session:
-        email: "Email"
-        password: "Mật khẩu"
+        email: "Email *"
+        password: "Mật khẩu *"
       user:
-        name: "Tên người dùng"
-        email: "Email"
-        gender: "Giới tính"
-        phone: "Số điện thoại"
-        password: "Mật khẩu"
-        password_confirmation: "Xác nhận mật khẩu"
+        name: "Tên người dùng *"
+        email: "Email *"
+        gender: "Giới tính *"
+        phone: "Số điện thoại *"
+        password: "Mật khẩu *"
+        password_confirmation: "Xác nhận mật khẩu *"
+      room:
+        room_number: "Số phòng *"
+        room_type_id: "Kiểu phòng *"
+        description: "Mô tả về phòng *"
+        images: "Ảnh phòng"
   activerecord:
     attributes:
       user:
