@@ -4,5 +4,10 @@
       <h2 class="title_color"><%= t ".title" %></h2>
       <p><%= t ".subtitle" %></p>
     </div>
+    <div class="row mb_30">
+      <% if @room_types.any? %>
+        <%= render @room_types, origin: local_assigns[:origin] %>
+      <% end %>
+    </div>
   </div>
 </section>
