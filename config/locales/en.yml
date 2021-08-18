@@ -1,11 +1,12 @@
 en:
   en: "EN"
   vi: "VN"
+  currency: "$"
   layouts:
     root_title: "Management Hotel"
     header:
       home: "Home"
-      accomodation: "Accomodation"
+      booking: "Booking"
       review: "Reviews"
       rooms: "Rooms"
       staffs: "Staffs"
@@ -25,12 +26,12 @@ en:
   static_pages:
     home:
       title: "Home"
-      welcome: "This is home page"
-      detail: "Static page of home will display lateer"
+    booking:
+      title: "Booking"
     help:
       title: "Help"
       welcome: "This is contact page"
-      detail: "Static page of home will display lateer"
+      detail: "Static page of home will display later"
     banner:
       subtitle1: "Away from monotonous life"
       subtitle2: "Relax Your Mind"
@@ -38,10 +39,6 @@ en:
                 you may be very confused at the<br> difference in price.
                 You may see some for as low as $.17 each."
       signup: "Sign up now!"
-    accomodation:
-      title: "Hotel Accomodation"
-      subtitle: "We all live in an age that belongs to the young at heart.
-                Life that is becoming extremely fast."
     testimonial:
       title: "Reviews of the staff"
       subtitle: "Our staff are young, enthusiastic people;
@@ -99,6 +96,13 @@ en:
     warning: "You can not access this page"
     invalid_format: "You can upload images only"
     required_size: "Maximum image size is 5MB"
+  room_types:
+    room_type:
+      book_now: "Book now"
+      night: "night"
+      details: "Details"
+      remaining: "remaining"
+      room: "room(s)"
   helpers:
     label:
       session:
@@ -123,7 +127,19 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Password confirm"
+    errors:
+      models:
+        room_type:
+          attributes:
+            images:
+              invalid_format: "must be a valid image format"
+              required_size: "should be less than 5MB"
+  helpers:
   shared:
     error_messages:
       part1: "This page has"
       part2: "errors"
+    accomodation:
+      title: "Hotel Accomodation"
+      subtitle: "We all live in an age that belongs to the young at heart.
+                Life that is becoming extremely fast."

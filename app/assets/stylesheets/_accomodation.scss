@@ -41,6 +41,21 @@
       font-size: 14px;
     }
   }
+
+  h6 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 0px;
+
+    .number {
+      color: $red;
+    }
+
+    small {
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
 }
 
 .sec_h4 {

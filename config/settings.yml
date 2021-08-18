@@ -3,6 +3,7 @@ client:
   host: "localhost:3000"
 src:
   logo: "Logo.png"
+  assets_path: "app/assets/images/"
 validation:
   name:
     length:
@@ -43,3 +44,28 @@ user:
     password: "password"
 room:
   image_size: "500x500"
+room_types:
+  max_in_rows: 4
+seed:
+  lorem: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  room_types:
+    max: 4
+    name: [
+      "Single bed room (SGL)",
+      "Twin bed room (TWN)",
+      "Double bed room (DBL)",
+      "Triple bed room (TRPL)"
+    ]
+    description: [
+      "Phòng có một giường đơn, dành cho 1 người ở.",
+      "Phòng nghỉ có hai giường ngủ, dành cho hai người.",
+      "Là loại phòng dành cho các cặp đôi, có 1 giường kích thước lớn.",
+      "Phòng ngủ lớn dành cho 3 người, có thể là loại 3 giường đơn
+      hoặc 1 chiếc giường lớn và 1 giường nhỏ."
+    ]
+    image: [
+      "room1.jpg",
+      "room2.jpg",
+      "room3.jpg",
+      "room4.jpg"
+    ]
