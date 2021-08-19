@@ -1,0 +1,14 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'variables';
+@import 'header';
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.app {
+  display: flex;
+  background-color: $main_bg;
+}

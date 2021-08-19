@@ -3,26 +3,42 @@ en:
   vi: "VN"
   currency: "$"
   layouts:
+    admin_layouts:
+      header:
+        hello: "Welcome master"
+        profile: "Profile"
+        setting: "Setting"
+        logout: "Log out"
+        users: "User"
+        rooms: "Room"
+        staffs: "Staff"
+        add_staff: "Add staff"
+        rm_staff: "Remove staff"
+        list_staff: "List staff"
+        add_room: "Add room"
+        rm_room: "Remove room"
+        list_room: "List room"
     root_title: "Management Hotel"
-    header:
-      home: "Home"
-      booking: "Booking"
-      review: "Reviews"
-      rooms: "Rooms"
-      staffs: "Staffs"
-      contact: "Contact"
-      profile: "Profile"
-      setting: "Setting"
-      logout: "Log out"
-      account: "Account"
-      login: "Log in"
-    footer:
-      about_us: "About us"
-      about_descrip: "We provide a luxorious stay with various value
-                      added and free services which will make
-                      you visit us over and over again."
-      address: "Address"
-      address_: "Bách Khoa univesity"
+    user_layouts:
+      header:
+        home: "Home"
+        booking: "Booking"
+        review: "Reviews"
+        rooms: "Rooms"
+        staffs: "Staffs"
+        contact: "Contact"
+        profile: "Profile"
+        setting: "Setting"
+        logout: "Log out"
+        account: "Account"
+        login: "Log in"
+      footer:
+        about_us: "About us"
+        about_descrip: "We provide a luxorious stay with various value
+                        added and free services which will make
+                        you visit us over and over again."
+        address: "Address"
+        address_: "Bách Khoa univesity"
   static_pages:
     home:
       title: "Home"

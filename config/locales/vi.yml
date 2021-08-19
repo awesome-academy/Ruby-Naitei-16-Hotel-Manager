@@ -3,26 +3,42 @@ vi:
   vi: "VN"
   currency: "$"
   layouts:
+    admin_layouts:
+      header:
+        hello: "Chào chủ nhân"
+        profile: "THông tin"
+        setting: "Cài đặt"
+        logout: "Đăng xuất"
+        users: "Người dùng"
+        rooms: "Phòng "
+        staffs: "Nhân viên"
+        add_staff: "Thêm nhân viên"
+        rm_staff: "Xóa "
+        list_staff: "Danh sách nhân viên"
+        add_room: "Thêm phòng "
+        rm_room: "Xóa"
+        list_room: "Danh sách phòng"
     root_title: "Management Hotel"
-    header:
-      home: "Trang chủ"
-      booking: "Đặt phòng"
-      rooms: "Phòng ở"
-      staffs: "Nhân viên"
-      review: "Đánh giá"
-      contact: "Liên hệ"
-      profile: "Thông tin"
-      setting: "Cài đặt"
-      logout: "Đăng xuất"
-      account: "Tài khoản"
-      login: "Đăng nhập"
-    footer:
-      about_us: "Về chúng tôi"
-      about_descrip: "Chúng tôi cung cấp một trải nghiệm về
-                      dịch vụ tốt và miễn phí . Chúng tôi chắc chắn
-                      các bạn sẽ quay lại sau khi trải nghiệm."
-      address: "Địa chỉ"
-      address_: "Bách Khoa univesity"
+    user_layouts:
+      header:
+        home: "Trang chủ"
+        booking: "Đặt phòng"
+        rooms: "Phòng ở"
+        staffs: "Nhân viên"
+        review: "Đánh giá"
+        contact: "Liên hệ"
+        profile: "Thông tin"
+        setting: "Cài đặt"
+        logout: "Đăng xuất"
+        account: "Tài khoản"
+        login: "Đăng nhập"
+      footer:
+        about_us: "Về chúng tôi"
+        about_descrip: "Chúng tôi cung cấp một trải nghiệm về
+                        dịch vụ tốt và miễn phí . Chúng tôi chắc chắn
+                        các bạn sẽ quay lại sau khi trải nghiệm."
+        address: "Địa chỉ"
+        address_: "Bách Khoa univesity"
   static_pages:
     home:
       title: "Home"
