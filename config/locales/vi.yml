@@ -11,10 +11,11 @@ vi:
         logout: "Đăng xuất"
         users: "Người dùng"
         rooms: "Phòng "
-        staffs: "Nhân viên"
-        add_staff: "Thêm nhân viên"
+        users: "Người dùng"
+        add_user: "Thêm nhân viên"
         rm_staff: "Xóa "
         list_staff: "Danh sách nhân viên"
+        list_customer: "Danh sachs nguoi dung"
         add_room: "Thêm phòng "
         rm_room: "Xóa"
         list_room: "Danh sách phòng"
@@ -159,3 +160,21 @@ vi:
       subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về
                 những người trẻ.
                 Cuộc sống đang trở nên cực kỳ nhanh chóng."
+  admin:
+    users:
+      not_found: "Không itmf thấy tài khoản"
+      new:
+        submit: "Tạo tài khoản"
+        title: "Tạo tài khoản"
+      create:
+        success: "Tạo thành công"
+        fail: "Tạo thất bại"
+      destroy:
+        delete_success: "Xóa thành công"
+        delete_fail: "Xóa thất bại"
+      user:
+        role: "Vi tri :"
+        created_at: "Thoi gian tao :"
+        delete: "Xóa"
+      index:
+        title: "Quản lí nhân viên"

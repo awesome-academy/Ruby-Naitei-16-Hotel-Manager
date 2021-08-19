@@ -9,11 +9,9 @@
   </head>
 
   <body>
-    <div class="app">
-      <%= render "layouts/admin_layouts/header" %>
-      <div class="container">
-        <%= yield :admin_page %>
-      </div>
+    <%= render "layouts/admin_layouts/header" %>
+    <div class="content-area">
+      <%= yield %>
     </div>
   </body>
 </html>

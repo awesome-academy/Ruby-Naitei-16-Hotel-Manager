@@ -1,3 +1,6 @@
-<% content_for :admin_page do %>
-  <p>Hello sir</p>
-<% end %>
+<% provide :title, t(".title") %>
+<%= paginate @users %>
+<ul class="users">
+  <%= render @users %>
+</ul>
+<%= paginate @users %>

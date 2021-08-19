@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
 
-  layout :get_layout
+  layout "layouts/user_layouts/application"
   before_action :set_locale
 
   def set_locale
@@ -12,12 +12,5 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
-  end
-
-  protected
-  def get_layout
-    return "layouts/user_layouts/application" unless current_user&.admin?
-
-    "layouts/admin_layouts/application"
   end
 end
