@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
 
   def booking
     @room_types = RoomType.most_available
+    @booking = Booking.new
   end
 
   def help; end

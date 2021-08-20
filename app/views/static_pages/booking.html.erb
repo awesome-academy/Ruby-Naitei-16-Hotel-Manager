@@ -1,3 +1,8 @@
 <% provide :title, t(".title") %>
 <%= render "shared/breadcrumb" %>
+<section class="hotel_booking_area">
+  <div class="container">
+    <%= render "shared/booking_form" %>
+  </div>
+</section>
 <%= render "shared/accomodation", origin: "booking" %>

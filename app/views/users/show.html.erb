@@ -1,13 +1,37 @@
 <% provide :title, @user.name %>
-<div class="row large-padding-top">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <ul>
-        <li><%= t ".name" %><%= @user.name %></li>
-        <li><%= t ".email" %><%= @user.email %></li>
-        <li><%= t ".gender" %><%= @user.gender %></li>
-        <li><%= t ".phone" %><%= @user.phone %></li>
-      </ul>
-    </section>
-  </aside>
+  <section class="user_info">
+    <ul>
+      <li><%= t ".name" %><%= @user.name %></li>
+      <li><%= t ".email" %><%= @user.email %></li>
+      <li><%= t ".gender" %><%= @user.gender %></li>
+      <li><%= t ".phone" %><%= @user.phone %></li>
+    </ul>
+  </section>
+  <section class="booking_list_area section_gap">
+    <div class="container">
+      <div class="section_title text-center">
+        <h2 class="title_color"><%= t ".bookings_title" %></h2>
+        <p><%= t ".bookings_subtitle" %></p>
+      </div>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+            <th><%= t ".room_number" %></th>
+            <th><%= t ".room_type" %></th>
+            <th><%= t ".booking_date" %></th>
+            <th><%= t ".checkin" %></th>
+            <th><%= t ".checkout" %></th>
+            <th><%= t ".total" %></th>
+            <th><%= t ".edit" %></th>
+            <th><%= t ".cancel" %></th>
+          </thead>
+          <tbody>
+            <% if @bookings.any? %>
+              <%= render @bookings %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 </div>

@@ -1,6 +1,7 @@
 en:
   en: "EN"
   vi: "VN"
+  number: "-- Select numbers --"
   currency: "$"
   layouts:
     admin_layouts:
@@ -91,6 +92,17 @@ en:
       email: "Email: "
       gender: "Gender: "
       phone: "Phone number: "
+      bookings_title: "Booking List"
+      bookings_subtitle: "We all live in an age that belongs to the young at heart.
+                Life that is becoming extremely fast."
+      room_number: "Room Number"
+      room_type: "Room Type"
+      booking_date: "Booking Date"
+      checkin: "Checkin"
+      checkout: "Checkout"
+      total: "Total"
+      edit: "Edit"
+      cancel: "Cancel"
   rooms:
     show:
       title: "Room "
@@ -124,6 +136,10 @@ en:
       details: "Details"
       remaining: "remaining"
       room: "room(s)"
+  bookings:
+    create:
+      success: "Booking successful. Please see details below!"
+      fail: "Booking failed."
   helpers:
     label:
       session:
@@ -169,6 +185,14 @@ en:
       title: "Hotel Accomodation"
       subtitle: "We all live in an age that belongs to the young at heart.
                 Life that is becoming extremely fast."
+    booking_form:
+      arrival: "Arrival Date"
+      departure: "Departure Date"
+      room_type: "-- Select Room Type --"
+      number: "-- Select numbers --"
+      book_now: "Book Now"
+      book: "Book"
+      your_room: "Your Room"
   admin:
     users:
       not_found: "User not found"

@@ -91,6 +91,18 @@ vi:
       email: "Email: "
       gender: "Giới tính: "
       phone: "Số điện thoại: "
+      bookings_title: "Danh sách đặt phòng"
+      bookings_subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về
+                những người trẻ.
+                Cuộc sống đang trở nên cực kỳ nhanh chóng."
+      room_number: "Số phòng"
+      room_type: "Loại phòng"
+      booking_date: "Ngày đặt"
+      checkin: "Checkin"
+      checkout: "Checkout"
+      total: "Tổng"
+      edit: "Chỉnh sửa"
+      cancel: "Hủy"
   rooms:
     show:
       title: "Phòng "
@@ -124,6 +136,10 @@ vi:
       details: "Chi tiết"
       remaining: "còn lại"
       room: "phòng"
+  bookings:
+    create:
+      success: "Đặt phòng thành công. Vui lòng xem thông tin chi tiết bên dưới!"
+      fail: "Đặt phòng thất bại."
   helpers:
     label:
       session:
@@ -170,6 +186,14 @@ vi:
       subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về
                 những người trẻ.
                 Cuộc sống đang trở nên cực kỳ nhanh chóng."
+    booking_form:
+      arrival: "Ngày tới"
+      departure: "Ngày về"
+      room_type: "-- Chọn Loại Phòng --"
+      number: "-- Chọn số lượng --"
+      book_now: "Đặt ngay"
+      book: "Đặt"
+      your_room: "phòng"
   admin:
     users:
       not_found: "Không tìm thấy tài khoản"

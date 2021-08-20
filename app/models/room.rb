@@ -10,6 +10,6 @@ class Room < ApplicationRecord
   validates :description, presence: true,
                   length: {maximum: Settings.validation.description.length.max}
 
-  scope :room_type_id, ->(id){where room_type_id: id}
-  scope :is_available, ->{where is_available: true}
+  scope :available, ->{where(is_available: true)}
+  scope :by_room_type_id, ->(room_type){where(room_type_id: room_type)}
 end
