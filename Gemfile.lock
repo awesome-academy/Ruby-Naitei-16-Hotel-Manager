@@ -335,6 +335,7 @@ DEPENDENCIES
   faker (= 2.1.2)
   image_processing (= 1.9.3)
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.3)
   mini_magick (= 4.9.5)
   mysql2

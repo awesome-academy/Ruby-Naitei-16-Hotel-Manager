@@ -13,14 +13,17 @@
           </li>
           <li class="nav-item submenu dropdown">
             <%= link_to "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" do %>
-              <%= t ".staffs" %>
+              <%= t ".users" %>
             <% end %>
             <ul class="dropdown-menu">
               <li class="nav-item">
-                <%= link_to t(".list_staff"), "#", class: "nav-link" %>
+                <%= link_to t(".list_staff"), admin_path({:role => :staff}), class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to t(".add_staff"), "#", class: "nav-link" %>
+                <%= link_to t(".list_customer"), admin_path({:role => :customer}), class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to t(".add_user"), new_admin_user_path, class: "nav-link" %>
               </li>
             </ul>
           </li>

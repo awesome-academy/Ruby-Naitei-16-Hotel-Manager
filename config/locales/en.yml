@@ -11,10 +11,11 @@ en:
         logout: "Log out"
         users: "User"
         rooms: "Room"
-        staffs: "Staff"
-        add_staff: "Add staff"
+        user: "User"
+        add_user: "Add user"
         rm_staff: "Remove staff"
         list_staff: "List staff"
+        list_customer: "List customer"
         add_room: "Add room"
         rm_room: "Remove room"
         list_room: "List room"
@@ -159,3 +160,21 @@ en:
       title: "Hotel Accomodation"
       subtitle: "We all live in an age that belongs to the young at heart.
                 Life that is becoming extremely fast."
+  admin:
+    users:
+      not_found: "User not found"
+      new:
+        submit: "Create account"
+        title: "Create account for other"
+      create:
+        success: "Create success"
+        fail: "Create fail"
+      destroy:
+        delete_success: "Delete success"
+        delete_fail: "Delete fail"
+      user:
+        role: "Role :"
+        created_at: "Created at :"
+        delete: "Delete"
+      index:
+        title: "Staff management"
