@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   def login user
     log_in user
     params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-    redirect_to root_url
+    user.admin? ? redirect_to(admin_path) : redirect_to(root_url)
   end
 
   def destroy

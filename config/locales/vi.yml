@@ -92,13 +92,6 @@ vi:
       gender: "Giới tính: "
       phone: "Số điện thoại: "
   rooms:
-    new:
-      title: "Tạo phòng"
-      select: "Chọn kiểu phòng"
-      submit: "Tạo phòng mới"
-    create:
-      success: "Tạo phòng thành công"
-      fail: "Tạo phòng thất bại"
     show:
       title: "Phòng "
       type: "Kiểu phòng: "
@@ -114,6 +107,17 @@ vi:
     invalid_format: "Bạn chỉ có thể tải lên ảnh"
     required_size: "Kích cỡ tối đa của ảnh là 5MB"
   room_types:
+    show:
+      title: "Kiểu phòng "
+      not_found: "Không tìm thấy kiểu phòng"
+      bed: "Số giường: "
+      air_conditioner: "Có điều hòa"
+      cost: "Giá: "
+      per_day: "$/ngày"
+      can_book: "Có thể đặt phòng"
+      book: "Đặt kiểu phòng này"
+      booked: "Hiện tại đã hết phòng có kiểu phòng này"
+      list: "Danh sách phòng trống"
     room_type:
       book_now: "Đặt ngay"
       night: "đêm"
@@ -136,7 +140,13 @@ vi:
         room_number: "Số phòng *"
         room_type_id: "Kiểu phòng *"
         description: "Mô tả về phòng *"
-        images: "Ảnh phòng"
+      room_type:
+        name: "Tên kiểu phòng *"
+        cost: "Giá kiểu phòng *"
+        bed_num: "Số giường của kiểu phòng *"
+        air_conditioner: "Có điều hòa *"
+        description: "Mô tả về kiểu phòng *"
+        images: "Ảnh của kiểu phòng"
   activerecord:
     attributes:
       user:
@@ -162,7 +172,7 @@ vi:
                 Cuộc sống đang trở nên cực kỳ nhanh chóng."
   admin:
     users:
-      not_found: "Không itmf thấy tài khoản"
+      not_found: "Không tìm thấy tài khoản"
       new:
         submit: "Tạo tài khoản"
         title: "Tạo tài khoản"
@@ -178,3 +188,19 @@ vi:
         delete: "Xóa"
       index:
         title: "Quản lí nhân viên"
+    rooms:
+      new:
+        title: "Tạo phòng"
+        select: "Chọn kiểu phòng"
+        submit: "Tạo phòng mới"
+      create:
+        success: "Tạo phòng thành công"
+        fail: "Tạo phòng thất bại"
+    room_types:
+      new:
+        title: "Tạo kiểu phòng"
+        select: "Lựa chọn"
+        submit: "Tạo kiểu phòng mới"
+      create:
+        success: "Tạo kiểu phòng thành công"
+        fail: "Tạo kiểu phòng thất bại"

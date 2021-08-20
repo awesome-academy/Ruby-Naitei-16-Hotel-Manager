@@ -3,13 +3,17 @@
 <div class="container content-padding">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_for @room, url: rooms_path do |f| %>
+      <%= form_for [:admin, @room_type] do |f| %>
         <%= render "shared/error_messages", object: f.object %>
 
-        <%= f.label :room_number %>
-        <%= f.text_field :room_number, class: "form-control" %>
-        <%= f.label :room_type_id %>
-        <%= f.select :room_type_id, select_room_type, prompt: t(".select"), class: "form-control" %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+        <%= f.label :cost %>
+        <%= f.number_field :cost, step: 0.01, class: "form-control" %>
+        <%= f.label :bed_num %>
+        <%= f.number_field :bed_num, class: "form-control" %>
+        <%= f.label :air_conditioner %>
+        <%= f.select :air_conditioner, [true, false], prompt: t(".select"), class: "form-control" %>
         <%= f.label :description %>
         <%= f.text_field :description, class: "form-control" %>
         <%= f.label :images %>

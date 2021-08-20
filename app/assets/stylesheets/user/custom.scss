@@ -253,36 +253,35 @@ input {
   display: flex;
   flex-flow: row no-wrap;
   justify-content: space-around;
-  overflow: hidden;
-}
+  overflow-y: scroll;
 
-.right-content {
-  width: 65vw;
-  overflow-x: scroll;
-  flex-grow: 1;
+  .content {
+    margin: 0 auto;
+    overflow-y: scroll;
 
-  &::-webkit-scrollbar {
-    display: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li {
+      list-style-type: none;
+    }
   }
 
-  * {
-    margin: 50px 100px;
-    
-  }
-}
-
-.left-content {
-  width: 35vw;
-  list-style: none;
-  flex-grow: 1;
-
-  * {
-    margin-left: 100px;
+  .vertical-line-x {
+    width: 500px;
+    height: 0px;
+    float: left; 
+    border: 1px inset;
+    background-color: $light_gray;
   }
 
-  ul {
-    margin-left: 0px;
-    list-style: none;
+  .vertical-line-y {
+    width: 0px;
+    height: 500px;
+    float: left; 
+    border: 1px inset;
+    background-color: $light_gray;
   }
 }
 

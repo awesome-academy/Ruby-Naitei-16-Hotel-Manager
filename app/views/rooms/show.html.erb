@@ -1,7 +1,7 @@
-<% provide :title, show_room %>
+<% provide :title, show_room(@room) %>
 <%= render "shared/breadcrumb" %>
 <div class="wrapper large-padding-top">
-  <div class="left-content">
+  <div class="content">
     <h1><%= @room.description %><br /></h1>
     <p><%= t ".type" %><%= @room_type.name %><br /></p>
     <ul>
@@ -12,18 +12,11 @@
       <% end %>
       <li><%= t ".cost" %><%= @room_type.cost %><%= t ".per_day" %></li>
     </ul>
-    
       <% if @room.is_available %>
         <p><%= t ".can_book" %></p>
         <%= link_to t(".book"), "#", class: "btn btn-primary" %>
       <% else %>
         <p><%= t ".booked" %></p>
       <% end %>
-    
-  </div>
-  <div class="right-content">
-    <% @room.images.each do |image| %>
-      <%= image_tag display_image(image) %>
-    <% end %>
   </div>
 </div>
