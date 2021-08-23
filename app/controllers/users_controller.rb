@@ -5,10 +5,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:warning] = t ".not_found"
-    redirect_to root_path
+    if @user
+      @bookings = @user.bookings.joins :room
+    else
+      flash[:warning] = t ".not_found"
+      redirect_to root_path
+    end
   end
 
   def create
