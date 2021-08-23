@@ -1,12 +1,19 @@
 <% provide :title, t(".profile") %>
 <%= render "shared/breadcrumb" %>
   <section class="user_info">
-    <ul>
-      <li><%= t ".name" %><%= @user.name %></li>
-      <li><%= t ".email" %><%= @user.email %></li>
-      <li><%= t ".gender" %><%= @user.gender %></li>
-      <li><%= t ".phone" %><%= @user.phone %></li>
-    </ul>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="default_image">
+          <%= image_tag select_default_ava(@user), :class => "style_image" %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h2><%= @user.name %></h2>
+        <p><strong><%= t ".email" %></strong><%= @user.email %></p>
+        <p><strong><%= t ".gender" %></strong><%= t "users.form.#{@user.gender}" %></p>
+        <p><strong><%= t ".phone" %></strong><%= @user.phone %></p>
+      </div>
+    </div>
   </section>
   <section class="booking_list_area section_gap">
     <div class="container">

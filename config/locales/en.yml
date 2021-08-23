@@ -82,13 +82,19 @@ en:
   users:
     new:
       title: "Sign up"
+    form:
       male: "Male"
       female: "Female"
       select: "Select gender"
-      submit: "Create my account"
+      submit: "Submit"
+    edit:
+      title: "Edit"
     create:
       success: "Sign up success"
       fail: "Sign up fail"
+    update:
+      success: "Update success"
+      fail: "Update  fail"
     show:
       profile: "Profile"
       not_found: "User not found"

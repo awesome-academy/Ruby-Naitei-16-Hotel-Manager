@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module RubyNaitei16HotelManager
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.middleware.use I18n::JS::Middleware
     config.load_defaults 6.1
 
     config.i18n.load_path += Dir[
