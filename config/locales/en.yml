@@ -92,13 +92,6 @@ en:
       gender: "Gender: "
       phone: "Phone number: "
   rooms:
-    new:
-      title: "Create Room"
-      select: "Select room type"
-      submit: "Create room"
-    create:
-      success: "Create room success"
-      fail: "Create room fail"
     show:
       title: "Room "
       type: "Room type: "
@@ -114,6 +107,17 @@ en:
     invalid_format: "You can upload images only"
     required_size: "Maximum image size is 5MB"
   room_types:
+    show:
+      title: "Room type "
+      not_found: "Room type not found"
+      bed: "Bed number: "
+      air_conditioner: "Has air conditioner"
+      cost: "Cost: "
+      per_day: "$/day"
+      can_book: "Can book"
+      book: "Book this room type"
+      booked: "Out of rooms"
+      list: "List Room"
     room_type:
       book_now: "Book now"
       night: "night"
@@ -136,7 +140,13 @@ en:
         room_number: "Room number *"
         room_type_id: "Room type *"
         description: "Room description *"
-        images: "Room images"
+      room_type:
+        name: "Room type name *"
+        cost: "Room type cost *"
+        bed_num: "Number beds of room type *"
+        air_conditioner: "Has air conditioner *"
+        description: "Room type description *"
+        images: "Room type images"
   activerecord:
     attributes:
       user:
@@ -151,7 +161,6 @@ en:
             images:
               invalid_format: "must be a valid image format"
               required_size: "should be less than 5MB"
-  helpers:
   shared:
     error_messages:
       part1: "This page has"
@@ -178,3 +187,19 @@ en:
         delete: "Delete"
       index:
         title: "Staff management"
+    rooms:
+      new:
+        title: "Create Room"
+        select: "Select room type"
+        submit: "Create room"
+      create:
+        success: "Create room success"
+        fail: "Create room fail"
+    room_types:
+      new:
+        title: "Create Room Type"
+        select: "Select"
+        submit: "Create new room type"
+      create:
+        success: "Create room type success"
+        fail: "Create room type fail"

@@ -3,6 +3,7 @@ class RoomType < ApplicationRecord
   accepts_nested_attributes_for :rooms
 
   has_many_attached :images
+  ROOMTYPE_PERMITTED = %i(name cost bed_num air_conditioner description).freeze
 
   validates :name, presence: true
   validates :description, presence: true,
