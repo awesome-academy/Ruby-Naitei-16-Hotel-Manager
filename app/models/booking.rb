@@ -1,7 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :room
   belongs_to :user
-  has_one :payment, dependent: :destroy
 
   attr_accessor :room_type, :total
 
@@ -9,6 +8,8 @@ class Booking < ApplicationRecord
 
   validates :checkin, presence: true, date: {after: Time.zone.today}
   validates :checkout, presence: true, date: {after: :checkin}
+
+  scope :non_checkout, ->{where is_checkout: false}
 
   class << self
     def create_bookings params, room_ids, user_id

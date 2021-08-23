@@ -1,0 +1,26 @@
+@import 'variables';
+
+.payment_area {
+  background: $white_smoke;
+  padding: 100px 0px;
+
+  .card {
+    padding: 40px;
+    background: $white;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .rooms-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .total {
+    color: $yellow_hover;
+  }
+
+  .font-italic {
+    font-style: italic;
+  }
+}

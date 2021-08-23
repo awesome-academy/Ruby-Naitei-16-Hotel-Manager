@@ -18,5 +18,6 @@ Rails.application.routes.draw do
     resources :rooms, only: %i(index show)
     resources :room_types, only: :show
     resources :bookings
+    resources :payments, only: %i(new create)
   end
 end

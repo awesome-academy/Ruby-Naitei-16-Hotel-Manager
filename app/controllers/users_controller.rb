@@ -1,16 +1,13 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, :load_user, except: %i(new create)
+
   def new
     @user = User.new
   end
 
   def show
-    @user = User.find_by id: params[:id]
-    if @user
-      @bookings = @user.bookings.joins :room
-    else
-      flash[:warning] = t ".not_found"
-      redirect_to root_path
-    end
+    @bookings = @user.bookings.joins :room
+    @payments = @user.payments
   end
 
   def create

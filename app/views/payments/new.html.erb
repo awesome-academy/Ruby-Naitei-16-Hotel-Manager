@@ -1,0 +1,74 @@
+<%= provide :title, t(".title") %>
+<%= render "shared/breadcrumb" %>
+<section class="payment_area">
+  <div class="container">
+    <div class="card shadow">
+      <div class="row">
+        <div class="col-md-12 order-md-1">
+          <h4 class="mb-3"><%= t ".address" %></h4>
+          <%= form_for current_user do |f| %>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <%= f.label :name %>
+                <%= f.text_field :name, disabled: true, class: "form-control" %>
+              </div>
+              <div class="col-md-5 mb-3">
+                <%= f.label :email %>
+                <%= f.text_field :email, disabled: true, class: "form-control" %>
+              </div>
+              <div class="col-md-3 mb-3">
+                <%= f.label :phone %>
+                <%= f.text_field :phone, disabled: true, class: "form-control" %>
+              </div>
+            </div>
+          <% end %>
+          <hr class="mb-4">
+          <%= form_for @payment do |f| %>
+            <div class="row">
+              <div class="col-md-12 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span ><%= t ".your_rooms" %></span>
+                  <span class="badge badge-secondary badge-pill"><%= @non_checkout_bookings.count %></span>
+                </h4>
+                <ul class="list-group mb-3">
+                  <% @non_checkout_bookings.each do |booking| %>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <h5 class="my-0 rooms-list">
+                        <span><%= t ".room" %> <%= booking.room.room_number %></span>
+                        <%= booking_calculate booking %> <%= t "currency" %>
+                      </h5>
+                      <p class="text-muted"><%= booking.room.room_type.name %></p>
+                    </li>
+                  <% end %>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <h4 class="my-0 rooms-list">
+                      <span><%= t ".total" %></span>
+                      <strong class="total">
+                        <%= f.number_field :amount, value: total_bill_calculate(@non_checkout_bookings), readonly: true, class: "form-control" %>
+                      </strong>
+                    </h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <h4 class="mb-3"><%= t ".payment" %></h4>
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" disabled>
+                <label class="custom-control-label" for="credit"><%= t ".credit_card" %></label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" checked>
+                <label class="custom-control-label" for="debit"><%= t ".cash" %></label>
+                <div class="invalid-feedback font-italic"><%= t ".note" %></div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <%= f.submit t(".submit"), class: "btn btn-primary btn-lg btn-block" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -23,4 +23,16 @@ class ApplicationController < ActionController::Base
     flash[:danger] = t "error.require_login"
     redirect_to login_url
   end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t "error.not_found"
+    redirect_to root_url
+  end
+
+  def correct_user
+    redirect_to root_url unless current_user? @user
+  end
 end

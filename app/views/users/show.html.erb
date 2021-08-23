@@ -1,4 +1,5 @@
-<% provide :title, @user.name %>
+<% provide :title, t(".profile") %>
+<%= render "shared/breadcrumb" %>
   <section class="user_info">
     <ul>
       <li><%= t ".name" %><%= @user.name %></li>
@@ -12,25 +13,54 @@
       <div class="section_title text-center">
         <h2 class="title_color"><%= t ".bookings_title" %></h2>
         <p><%= t ".bookings_subtitle" %></p>
+        <div class="checkout-btn"><%= link_to t(".checkout"), new_payment_path, class: "view_btn button_hover" %></div>
       </div>
-      <div class="table-responsive">
-        <table id="mytable" class="table table-bordred table-striped">
-          <thead>
-            <th><%= t ".room_number" %></th>
-            <th><%= t ".room_type" %></th>
-            <th><%= t ".booking_date" %></th>
-            <th><%= t ".checkin" %></th>
-            <th><%= t ".checkout" %></th>
-            <th><%= t ".total" %></th>
-            <th><%= t ".edit" %></th>
-            <th><%= t ".cancel" %></th>
-          </thead>
-          <tbody>
-            <% if @bookings.any? %>
-              <%= render @bookings %>
-            <% end %>
-          </tbody>
-        </table>
+      <div class="card shadow">
+        <div class="table-responsive">
+          <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+              <th><%= t ".room_number" %></th>
+              <th><%= t ".room_type" %></th>
+              <th><%= t ".booking_date" %></th>
+              <th><%= t ".checkin" %></th>
+              <th><%= t ".checkout" %></th>
+              <th><%= t ".total" %></th>
+              <th><%= t ".is_paid" %></th>
+              <th><%= t ".edit" %></th>
+              <th><%= t ".cancel" %></th>
+            </thead>
+            <tbody>
+              <% if @bookings.any? %>
+                <%= render @bookings %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bills_list_area section_gap">
+    <div class="container">
+      <div class="section_title text-center">
+        <h2 class="title_color"><%= t ".bills_title" %></h2>
+        <p><%= t ".bills_subtitle" %></p>
+      </div>
+      <div class="card shadow">
+        <div class="table-responsive">
+          <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+              <th><%= t ".bill_id" %></th>
+              <th><%= t ".created_date" %></th>
+              <th><%= t ".total" %></th>
+              <th><%= t ".is_paid" %></th>
+            </thead>
+            <tbody>
+              <% if @payments.any? %>
+                <%= render @payments %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
