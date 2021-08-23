@@ -23,6 +23,8 @@ vi:
         add_room: "Thêm phòng "
         rm_room: "Xóa"
         list_room: "Danh sách phòng"
+        booking: "Đặt phòng"
+        list_booking: "Danh sách phòng đã đặt "
     root_title: "Management Hotel"
     user_layouts:
       header:
@@ -286,6 +288,8 @@ vi:
         delete: "Xóa"
       index:
         title: "Quản lí nhân viên"
+      user:
+        confirm: "Chắc chưa ?"
     rooms:
       new:
         title: "Tạo phòng"
@@ -322,3 +326,35 @@ vi:
         success: "Xóa kiểu phòng thành công"
         fail: "Xóa kiểu phòng thất bại"
       not_found: "Không tìm thấy kiểu phòng"
+    bookings:
+      booking:
+        checkout: "checkout"
+        non_checkout: "chưa checkout"
+        confirm: "Chắc chưa ?"
+      create:
+        success: "Đặt phòng thành công. Vui lòng xem thông tin chi tiết bên dưới!"
+        fail: "Đặt phòng thất bại."
+      booking_form:
+        arrival: "Ngày tới"
+        departure: "Ngày về"
+        room_type: "-- Chọn Loại Phòng --"
+        number: "-- Chọn số lượng --"
+        book_now: "Đặt ngay"
+        book: "Đặt"
+        your_room: "phòng"
+      index:
+        room_number: "Số phòng "
+        room_type: "Loại phòng"
+        booking_date: "Ngày đặt "
+        checkin: "Ngày nhận phòng"
+        checkout: "Ngày trả phòng"
+        is_checkout: "Trả phòng"
+        total: "Tổng"
+        edit: "Sửa"
+        cancel: "Xóa"
+        booking_title: "THông tin đặt phòng"
+        booking_subtitle: "Cảm nhận dịch vụ tốt nhất thế giới "
+        not_found: "Không có đặt phòng hiện tại"
+      edit:
+        header: "Thay đổi giao dịch đặt phòng số :"
+        submit: "Thay đổi"

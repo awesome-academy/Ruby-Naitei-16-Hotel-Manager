@@ -1,0 +1,32 @@
+<section class="booking_list_area section_gap">
+  <div id="booking-modal" class="modal fade"></div>
+  <div class="container">
+    <div class="section_title text-center">
+      <h2 class="title_color"><%= t ".booking_title" %></h2>
+      <p><%= t ".booking_subtitle" %></p>
+    </div>
+    <div class="table-responsive">
+      <table id="mytable" class="table table-bordred table-striped">
+        <thead>
+          <th><%= t ".id" %></th>
+          <th><%= t ".room_number" %></th>
+          <th><%= t ".room_type" %></th>
+          <th><%= t ".booking_date" %></th>
+          <th><%= t ".checkin" %></th>
+          <th><%= t ".checkout" %></th>
+          <th><%= t ".is_checkout" %></th>
+          <th><%= t ".total" %></th>
+          <th><%= t ".edit" %></th>
+          <th><%= t ".cancel" %></th>
+        </thead>
+        <tbody>
+          <% if @bookings.any? %>
+            <%= render @bookings %>
+          <% else %>
+            <p><%= t".not_found" %></p>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

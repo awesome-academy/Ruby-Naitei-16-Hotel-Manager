@@ -12,25 +12,34 @@
             <%= link_to t(".home"), home_path, class: "nav-link" %>
           </li>
           <li class="nav-item submenu dropdown">
-            <%= link_to "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" do %>
-              <%= t ".users" %>
-            <% end %>
+            <%= link_to t(".booking"), "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown"%>
             <ul class="dropdown-menu">
               <li class="nav-item">
-                <%= link_to t(".list_staff"), admin_path({:role => :staff}), class: "nav-link" %>
+                <%= link_to t(".booking"), admin_book_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to t(".list_customer"), admin_path({:role => :customer}), class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to t(".add_user"), new_admin_user_path, class: "nav-link" %>
+                <%= link_to t(".list_booking"), admin_bookings_path, class: "nav-link" %>
               </li>
             </ul>
           </li>
           <li class="nav-item submenu dropdown">
-            <%= link_to "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" do %>
-              <%= t ".rooms" %>
-            <% end %>
+            <%= link_to t(".users"),"#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" %>
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <%= link_to t(".list_customer"), admin_path({:role => :customer}), class: "nav-link" %>
+              </li>
+              <% if current_user.admin? %>
+                <li class="nav-item">
+                  <%= link_to t(".list_staff"), admin_path({:role => :staff}), class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to t(".add_user"), new_admin_user_path, class: "nav-link" %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+          <li class="nav-item submenu dropdown">
+            <%= link_to t(".rooms"),"#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" %>
             <ul class="dropdown-menu">
               <% RoomType.all.each do |room_type| %>
                 <li class="nav-item">
@@ -43,9 +52,8 @@
             </ul>
           </li>
           <li class="nav-item submenu dropdown">
-            <%= link_to "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" do %>
-              <%= current_user.name %>
-            <% end %>
+            <%= link_to current_user.name,"#", class:"nav-link dropdown-toggle",
+                        "data-toggle": "dropdown" %>
             <ul class="dropdown-menu">
               <li class="nav-item">
                 <%= link_to t(".profile"), current_user, class: "nav-link" %>

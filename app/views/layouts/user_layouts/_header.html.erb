@@ -8,12 +8,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
         <ul class="nav navbar-nav menu_nav ml-auto">
-          <li class="nav-item">
-            <%= link_to t(".home"), home_path, class: "nav-link" %>
-          </li>
-          <% if current_user&.admin? %>
+          <% if current_user&.admin? || current_user&.staff? %>
             <li class="nav-item">
               <%= link_to t(".admin"), admin_path, class: "nav-link" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to t(".home"), home_path, class: "nav-link" %>
             </li>
           <% end %>
           <li class="nav-item">

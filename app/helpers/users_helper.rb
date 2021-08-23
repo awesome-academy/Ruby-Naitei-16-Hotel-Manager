@@ -10,4 +10,8 @@ module UsersHelper
   def select_default_ava user
     user.male? ? Settings.default_ava.male : Settings.default_ava.female
   end
+
+  def select_user_id
+    User.pluck(:name, :id)
+  end
 end
