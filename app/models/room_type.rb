@@ -1,6 +1,6 @@
 class RoomType < ApplicationRecord
   has_many :rooms, dependent: :destroy
-  accepts_nested_attributes_for :rooms
+  accepts_nested_attributes_for :rooms, allow_destroy: true
 
   has_many_attached :images
   ROOMTYPE_PERMITTED = %i(name cost bed_num air_conditioner description).freeze

@@ -27,6 +27,7 @@ en:
     user_layouts:
       header:
         home: "Home"
+        admin: "Admin"
         booking: "Booking"
         review: "Reviews"
         rooms: "Rooms"
@@ -133,6 +134,8 @@ en:
       booked: "Booked"
       per_day: "$/day"
       not_found: "Not found this room"
+      confirm: "Are you sure"
+      submit: "Delete room"
     warning: "You can not access this page"
     invalid_format: "You can upload images only"
     required_size: "Maximum image size is 5MB"
@@ -148,6 +151,8 @@ en:
       book: "Book this room type"
       booked: "Out of rooms"
       list: "List Room"
+      confirm: "Are you sure"
+      submit: "Delete room type"
     room_type:
       book_now: "Book now"
       night: "night"
@@ -260,6 +265,16 @@ en:
       create:
         success: "Create room success"
         fail: "Create room fail"
+      edit:
+        title: "Edit room info"
+        submit: "Update room"
+      update:
+        success: "Update room success"
+        fail: "Update room fail"
+      destroy:
+        success: "Delete room success"
+        fail: "Delete room fail"
+      not_found: "Room not found"
     room_types:
       new:
         title: "Create Room Type"
@@ -268,3 +283,13 @@ en:
       create:
         success: "Create room type success"
         fail: "Create room type fail"
+      edit:
+        title: "Edit room type info"
+        submit: "Update room type"
+      update:
+        success: "Update room type success"
+        fail: "Update room type fail"
+      destroy:
+        success: "Delete room type success"
+        fail: "Delete room type fail"
+      not_found: "Room type not found"

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     namespace :admin do
       get "/", to: "users#index"
-      resources :users, only: %i(new create index destroy)
-      resources :rooms, only: %i(new create)
-      resources :room_types, only: %i(new create)
+      resources :users, except: %i(show edit update)
+      resources :rooms, except: %i(index show)
+      resources :room_types, except: %i(index show)
     end
     root "static_pages#home"
     get "/home", to: "static_pages#home"
