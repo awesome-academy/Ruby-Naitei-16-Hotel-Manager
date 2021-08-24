@@ -27,6 +27,7 @@ vi:
     user_layouts:
       header:
         home: "Trang chủ"
+        admin: "Trang admin"
         booking: "Đặt phòng"
         rooms: "Phòng ở"
         staffs: "Nhân viên"
@@ -131,6 +132,8 @@ vi:
       booked: "Đã đặt"
       per_day: "$/ngày"
       not_found: "Không tìm thấy phòng này"
+      confirm: "Bạn có chắc không"
+      submit: "Xóa phòng"
     warning: "Bạn không có quyền truy cập trang này"
     invalid_format: "Bạn chỉ có thể tải lên ảnh"
     required_size: "Kích cỡ tối đa của ảnh là 5MB"
@@ -146,6 +149,8 @@ vi:
       book: "Đặt kiểu phòng này"
       booked: "Hiện tại đã hết phòng có kiểu phòng này"
       list: "Danh sách phòng trống"
+      confirm: "Bạn có chắc không"
+      submit: "Xóa kiểu phòng"
     room_type:
       book_now: "Đặt ngay"
       night: "đêm"
@@ -259,6 +264,16 @@ vi:
       create:
         success: "Tạo phòng thành công"
         fail: "Tạo phòng thất bại"
+      edit:
+        title: "Thay đổi thông tin phòng"
+        submit: "Cập nhật phòng"
+      update:
+        success: "Cập nhật phòng thành công"
+        fail: "Cập nhật phòng thất bại"
+      destroy:
+        success: "Xóa phòng thành công"
+        fail: "Xóa phòng thất bại"
+      not_found: "Không tìm thấy phòng"
     room_types:
       new:
         title: "Tạo kiểu phòng"
@@ -267,3 +282,13 @@ vi:
       create:
         success: "Tạo kiểu phòng thành công"
         fail: "Tạo kiểu phòng thất bại"
+      edit:
+        title: "Thay đổi thông tin kiểu phòng"
+        submit: "Cập nhật kiểu phòng"
+      update:
+        success: "Cập nhật kiểu phòng thành công"
+        fail: "Cập nhật kiểu phòng thất bại"
+      destroy:
+        success: "Xóa kiểu phòng thành công"
+        fail: "Xóa kiểu phòng thất bại"
+      not_found: "Không tìm thấy kiểu phòng"
