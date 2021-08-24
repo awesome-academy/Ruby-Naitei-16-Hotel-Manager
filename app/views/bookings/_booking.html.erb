@@ -6,18 +6,18 @@
   <td><%= booking.checkout.to_date %></td>
   <td><%= total_calculate booking %> <%= t "currency" %></td>
   <td><%= checkout_to_text booking.is_checkout %></td>
-  <td>
-    <p data-placement="top" data-toggle="tooltip">
-      <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#edit" >
+  <% if is_deadline_expired? booking.created_at %>
+    <td colspan="2"></td>
+  <% else %>
+    <td>
+      <%= link_to edit_booking_path(booking), remote: true, class: "btn btn-default" do %>
         <span class="glyphicon glyphicon-pencil"></span>
-      </button>
-    </p>
-  </td>
-  <td>
-    <p data-placement="top" data-toggle="tooltip">
-      <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#delete" >
+      <% end %>
+    </td>
+    <td>
+      <%= link_to booking_delete_path(booking), remote: true, class: "btn btn-danger" do %>
         <span class="glyphicon glyphicon-trash"></span>
-      </button>
-    </p>
-  </td>
+      <% end %>
+    </td>
+  <% end %>
 </tr>

@@ -4,12 +4,15 @@ class Booking < ApplicationRecord
 
   attr_accessor :room_type, :total
 
-  PERMITTED = %i(room_id user_id booking_date checkin checkout).freeze
+  PERMITTED = %i(room_id user_id checkin checkout).freeze
+
+  after_destroy :update_room_status
 
   validates :checkin, presence: true, date: {after: Time.zone.today}
   validates :checkout, presence: true, date: {after: :checkin}
 
   scope :non_checkout, ->{where is_checkout: false}
+  scope :recent, ->{order created_at: :desc}
 
   class << self
     def create_bookings params, room_ids, user_id
@@ -18,7 +21,7 @@ class Booking < ApplicationRecord
           booking = Booking.new booking_params(params, room_id, user_id)
           booking.save!
           Room.transaction do
-            booking.room.update!(is_available: false)
+            booking.room.update! is_available: false
             raise ActiveRecord::Rollback
           end
         end
@@ -28,8 +31,12 @@ class Booking < ApplicationRecord
     end
 
     def booking_params params, room_id, user_id
-      params[:booking].merge!(room_id: room_id, user_id: user_id)
+      params[:booking].merge! room_id: room_id, user_id: user_id
       params.require(:booking).permit PERMITTED
     end
+  end
+
+  def update_room_status
+    room.update! is_available: true
   end
 end

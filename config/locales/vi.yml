@@ -164,6 +164,26 @@ vi:
     create:
       success: "Đặt phòng thành công. Vui lòng xem thông tin chi tiết bên dưới!"
       fail: "Đặt phòng thất bại."
+    edit:
+      header: "Thay đổi đặt phòng"
+      cancel:  "Hủy bỏ"
+      submit: "Cập nhật"
+    update:
+       booking_updated: "Đã cập nhật đặt phòng!"
+       update_fail: "Cập nhật thất bại!"
+    delete:
+      header: "Hủy Đặt Phòng"
+      body: "Bạn có chắc chắn muốn hủy "
+      room: "phòng"
+      symbol: " không?"
+      yes_ans: "Vâng, hủy đặt phòng này"
+      no_ans: "Không"
+    destroy:
+      booking_deleted: "Xóa thành công!"
+      delete_fail: "Xóa không thành công!"
+    errors:
+      not_found: "Không tìm thấy đặt trước!"
+      deadline_expired: Hết thời hạn cập nhật đặt phòng!
   payments:
     payment:
       paid: "đã thanh toán"
@@ -221,6 +241,12 @@ vi:
             images:
               invalid_format: "phải là định dạng hình ảnh hợp lệ"
               required_size: "phải nhỏ hơn 5MB"
+        booking:
+          attributes:
+            checkin:
+              date_after: "phải sau ngày hôm nay"
+            checkout:
+              date_after: "phải sau ngày checkin"
   shared:
     error_messages:
       part1: "Trang này có"

@@ -1,0 +1,33 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4><%= t ".header" %> <%= @booking.room.room_number %></h4>
+    </div>
+    <%= form_for @booking, remote: true do |f| %>
+      <div class="modal-body">
+        <%= render "shared/error_messages", object: f.object %>
+        <div class="form-group">
+          <%= f.label :checkin, class:"control-label" %>
+          <div class="input-group date">
+            <%= f.date_field :checkin, class: "form-control" %>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :checkout, class: "control-label" %>
+          <div class="input-group date" id="datetimepicker">
+            <%= f.date_field :checkout, class: "form-control" %>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit t(".submit"), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
