@@ -70,3 +70,6 @@ seed:
     ]
 not_found_page: "public/404.html"
 format_date_time: "%Y-%m-%d %I:%M %p"
+default_ava:
+  male: "male.jpg"
+  female: "female.jpg"
