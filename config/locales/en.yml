@@ -3,6 +3,9 @@ en:
   vi: "VN"
   number: "-- Select numbers --"
   currency: "$"
+  error:
+    not_found: "User not found!"
+    require_login: "Please log in!"
   layouts:
     admin_layouts:
       header:
@@ -87,6 +90,7 @@ en:
       success: "Sign up success"
       fail: "Sign up fail"
     show:
+      profile: "Profile"
       not_found: "User not found"
       name: "User name: "
       email: "Email: "
@@ -100,9 +104,17 @@ en:
       booking_date: "Booking Date"
       checkin: "Checkin"
       checkout: "Checkout"
+      is_checkout: "Status"
       total: "Total"
       edit: "Edit"
       cancel: "Cancel"
+      bills_title: "Bills List"
+      bills_subtitle: "We all live in an age that belongs to the young at heart.
+                Life that is becoming extremely fast."
+      bill_id: "Bill ID"
+      created_date: "Created Date"
+      total: "Total"
+      is_paid: "Status"
   rooms:
     show:
       title: "Room "
@@ -137,9 +149,28 @@ en:
       remaining: "remaining"
       room: "room(s)"
   bookings:
+    booking:
+      checkout: "checkout"
+      non_checkout: "not checkout yet"
     create:
       success: "Booking successful. Please see details below!"
       fail: "Booking failed."
+  payments:
+    payment:
+      paid: "paid"
+      unpaid: "unpaid"
+    new:
+      title: "Payment"
+      address: "Billing address"
+      your_rooms: "Your rooms"
+      total: "Total"
+      payment: "Payment"
+      credit_card: "Credit card"
+      note: "* In case of cash payment, please go to the front desk as soon as possible"
+      submit: "Continue to Checkout"
+      cash: "Cash"
+      room: "Room"
+      no_booking_to_checkout: "No booking to checkout!"
   helpers:
     label:
       session:
@@ -170,6 +201,10 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Password confirm"
+      payment:
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
     errors:
       models:
         room_type:

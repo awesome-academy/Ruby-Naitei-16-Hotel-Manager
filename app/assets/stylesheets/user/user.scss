@@ -2,4 +2,34 @@
 
 .booking_list_area {
   background: $white_smoke;
+
+  .view_btn {
+    font-size: 14px;
+    line-height: 36px;
+    display: inline-block;
+    color: $dark;
+    font-weight: 500;
+    padding: 0px 30px;
+    background: $yellow;
+  }
+
+  .card {
+    padding: 40px;
+    background: $white;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .checkout-btn {
+    margin-top: 20px;
+  }
+}
+
+.bills_list_area {
+  .card {
+    padding: 40px;
+    background: $white_smoke;
+    max-width: 100%;
+    border-radius: 10px;
+  }
 }

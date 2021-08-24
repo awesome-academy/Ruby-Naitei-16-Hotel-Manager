@@ -2,6 +2,9 @@ vi:
   en: "EN"
   vi: "VN"
   currency: "$"
+  error:
+    not_found: "Không tìm thấy người dùng!"
+    require_login: "Vui lòng đăng nhập!"
   layouts:
     admin_layouts:
       header:
@@ -86,6 +89,7 @@ vi:
       success: "Đăng ký thành công"
       fail: "Đăng ký thất bại"
     show:
+      profile: "Thông tin người dùng"
       not_found: "Không tìm thấy người dùng"
       name: "Tên người dùng: "
       email: "Email: "
@@ -100,9 +104,17 @@ vi:
       booking_date: "Ngày đặt"
       checkin: "Checkin"
       checkout: "Checkout"
+      is_checkout: "Trạng thái"
       total: "Tổng"
       edit: "Chỉnh sửa"
       cancel: "Hủy"
+      bills_title: "Danh sách thanh toán"
+      bills_subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về tuổi trẻ.
+                 Cuộc sống đang trở nên cực kỳ nhanh chóng. "
+      bill_id: "ID"
+      created_date: "Ngày tạo"
+      tổng số: "Tổng số"
+      is_paid: "Trạng thái"
   rooms:
     show:
       title: "Phòng "
@@ -137,9 +149,28 @@ vi:
       remaining: "còn lại"
       room: "phòng"
   bookings:
+    booking:
+      checkout: "checkout"
+      non_checkout: "chưa checkout"
     create:
       success: "Đặt phòng thành công. Vui lòng xem thông tin chi tiết bên dưới!"
       fail: "Đặt phòng thất bại."
+  payments:
+    payment:
+      paid: "đã thanh toán"
+      unpaid: "chưa thanh toán"
+    new:
+      title: "Thanh toán"
+      address: "Địa chỉ thanh toán"
+      your_rooms: "Phòng của bạn"
+      total: "Tổng"
+      payment: "Thanh toán"
+      credit_card: "Thẻ tín dụng"
+      note: "* Trong trường hợp thanh toán bằng tiền mặt, vui lòng đến quầy lễ tân càng sớm càng tốt"
+      submit: "Tiếp tục thanh toán"
+      cash: "Tiền mặt"
+      room: "Phòng"
+      no_booking_to_checkout: "Không có đơn cần thanh toán!"
   helpers:
     label:
       session:
@@ -170,6 +201,10 @@ vi:
         email: "Email"
         password: "Mật khẩu"
         password_confirmation: "Mật khẩu xác nhận"
+      payment:
+        name: "Tên"
+        email: "Email"
+        phone: "Điện thoại"
     errors:
       models:
         room_type:

@@ -5,6 +5,7 @@
   <td><%= booking.checkin.to_date %></td>
   <td><%= booking.checkout.to_date %></td>
   <td><%= total_calculate booking %> <%= t "currency" %></td>
+  <td><%= checkout_to_text booking.is_checkout %></td>
   <td>
     <p data-placement="top" data-toggle="tooltip">
       <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#edit" >

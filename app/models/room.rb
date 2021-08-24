@@ -11,5 +11,6 @@ class Room < ApplicationRecord
                   length: {maximum: Settings.validation.description.length.max}
 
   scope :available, ->{where(is_available: true)}
+  scope :not_available, ->{where(is_available: false)}
   scope :by_room_type_id, ->(room_type){where(room_type_id: room_type)}
 end

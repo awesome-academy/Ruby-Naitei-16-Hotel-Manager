@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :rooms, through: :bookings
   has_many :reviews, as: :commentable, dependent: :destroy
+  has_many :payments, dependent: :destroy
 
   enum gender: {female: 0, male: 1}
   enum role: {customer: -1, staff: 0, admin: 1}
@@ -44,8 +45,11 @@ class User < ApplicationRecord
     update_attribute :remember_digest, User.digest(remember_token)
   end
 
-  def authenticated? remember_token
-    BCrypt::Password.new(remember_digest).is_password? remember_token
+  def authenticated? attribute, token
+    digest = send "#{attribute}_digest"
+    return false unless digest
+
+    BCrypt::Password.new(digest).is_password? token
   end
 
   def forget

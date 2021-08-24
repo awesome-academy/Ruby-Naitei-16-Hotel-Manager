@@ -1,0 +1,6 @@
+<tr id="payment-<%= payment.id %>">
+  <td><%= link_to payment.id, "#" %></td>
+  <td><%= format_date_time payment.created_at %></td>
+  <td><%= payment.amount %> <%= t "currency" %></td>
+  <td><%= paid_to_text payment.is_paid %></td>
+</tr>
