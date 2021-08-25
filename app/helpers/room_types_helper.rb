@@ -3,7 +3,7 @@ module RoomTypesHelper
     if origin == "booking"
       "#room_type_path"
     elsif origin == "home"
-      booking_path
+      book_path
     end
   end
 

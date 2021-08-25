@@ -166,6 +166,26 @@ en:
     create:
       success: "Booking successful. Please see details below!"
       fail: "Booking failed."
+    edit:
+      header: "Change Booking for Room"
+      cancel: "Cancel"
+      submit: "Update"
+    update:
+      booking_updated: "Booking Updated!"
+      update_fail: "Update Fail!"
+    delete:
+      header: "Cancel Room"
+      body: "Are you sure you wish to cancel "
+      room: "room"
+      symbol: "?"
+      yes_ans: "Yes, Delete This Booking"
+      no_ans: "No, Please Don't"
+    destroy:
+      booking_deleted: "Booking Deleted!"
+      delete_fail: "Delete Fail!"
+    errors:
+      not_found: "Booking not found!"
+      deadline_expired: "The booking update deadline has expired!"
   payments:
     payment:
       paid: "paid"

@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
-  before_action :logged_in_user, only: %i(create destroy)
-  before_action :check_numberic, :booked_room_ids, only: %i(create update)
+  include BookingsHelper
+
+  before_action :logged_in_user
+  before_action :check_numberic, :booked_room_ids, only: :create
+  before_action :load_booking, except: :create
+  before_action :check_change_booking, only: %i(update destroy)
 
   def show; end
 
@@ -11,22 +15,46 @@ class BookingsController < ApplicationController
       redirect_to current_user
     else
       flash[:danger] = t ".fail"
-      redirect_to booking_path
+      redirect_to book_path
     end
   end
 
-  def update; end
+  def edit; end
 
-  def destroy; end
+  def update
+    if @booking.update booking_params
+      flash[:success] = t ".booking_updated"
+      redirect_to current_user
+    else
+      flash[:danger] = t ".update_fail"
+      render :edit
+    end
+  end
+
+  def delete; end
+
+  def destroy
+    @booking.destroy!
+
+    flash[:success] = t ".booking_deleted"
+    redirect_to current_user
+  rescue ActiveRecord::RecordInvalid
+    flash[:danger] = t ".delete_fail"
+    render :delete
+  end
 
   private
+
+  def booking_params
+    params.require(:booking).permit Booking::PERMITTED
+  end
 
   def check_numberic
     @total = params.dig(:booking, :total).to_i
     return unless @total < 1
 
     flash[:danger] = t ".fail"
-    redirect_to booking_path
+    redirect_to book_path
   end
 
   def booked_room_ids
@@ -37,6 +65,22 @@ class BookingsController < ApplicationController
     return if @booked_room_ids.present?
 
     flash[:danger] = t ".fail"
-    redirect_to booking_path
+    redirect_to book_path
+  end
+
+  def check_change_booking
+    return unless is_deadline_expired? @booking.created_at
+
+    flash[:danger] = t ".errors.deadline_expired"
+    redirect_to current_user
+  end
+
+  def load_booking
+    id = params[:id].presence || params[:booking_id]
+    @booking = Booking.find_by id: id
+    return if @booking
+
+    flash[:danger] = t ".errors.not_found"
+    redirect_to current_user
   end
 end

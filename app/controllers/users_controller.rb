@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @bookings = @user.bookings.joins :room
+    @bookings = @user.bookings.recent.joins :room
     @payments = @user.payments
   end
 

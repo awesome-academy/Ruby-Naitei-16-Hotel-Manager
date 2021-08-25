@@ -1,0 +1,14 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4><%= t ".header" %> <%= @booking.room.room_number %></h4>
+    </div>
+    <div class="modal-body">
+      <p><%= t ".body" %><b><%= t ".room" %> <%= @booking.room.room_number %></b><%= t ".symbol" %></p>
+    </div>
+    <div class="modal-footer">
+      <%= link_to t(".yes_ans"), booking_path(@booking), method: :delete, remote: true, class: "btn btn-danger" %>
+      <%= link_to t(".no_ans"), "#", class: "btn btn-default", data: { dismiss: "modal" } %>
+    </div>
+  </div>
+</div>

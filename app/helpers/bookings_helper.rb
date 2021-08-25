@@ -8,4 +8,9 @@ module BookingsHelper
   def checkout_to_text is_checkout
     is_checkout ? t(".checkout") : t(".non_checkout")
   end
+
+  def is_deadline_expired? start_date
+    due_date = start_date + Settings.due_time.minutes
+    due_date.before? Time.zone.now
+  end
 end
