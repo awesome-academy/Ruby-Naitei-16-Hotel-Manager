@@ -21,6 +21,8 @@ vi:
         list_staff: "Danh sách nhân viên"
         list_customer: "Danh sachs nguoi dung"
         add_room: "Thêm phòng "
+        add_room_type: "Thêm kiểu phòng"
+        payment: "Thanh toán"
         rm_room: "Xóa"
         list_room: "Danh sách phòng"
         booking: "Đặt phòng"
@@ -358,3 +360,10 @@ vi:
       edit:
         header: "Thay đổi giao dịch đặt phòng số :"
         submit: "Thay đổi"
+    payments:
+      change_paid_status:
+        success: "Cập nhật trạng thái thành công"
+        fail: "Cập nhật trạng thái thất bại"
+      index:
+        not_found: "Không tìm thấy"
+        title: "Danh sách thanh toán"

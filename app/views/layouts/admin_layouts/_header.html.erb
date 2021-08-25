@@ -43,28 +43,19 @@
             <ul class="dropdown-menu">
               <% RoomType.all.each do |room_type| %>
                 <li class="nav-item">
-                  <%= link_to room_type.name, room_type, class: "nav-link" %>
+                  <%= link_to room_type.name, admin_room_type_path(room_type), class: "nav-link" %>
                 </li>
               <% end %>
               <li class="nav-item">
                 <%= link_to t(".add_room"), new_admin_room_path, class: "nav-link" %>
               </li>
+              <li class="nav-item">
+                <%= link_to t(".add_room_type"), new_admin_room_type_path, class: "nav-link" %>
+              </li>
             </ul>
           </li>
-          <li class="nav-item submenu dropdown">
-            <%= link_to current_user.name,"#", class:"nav-link dropdown-toggle",
-                        "data-toggle": "dropdown" %>
-            <ul class="dropdown-menu">
-              <li class="nav-item">
-                <%= link_to t(".profile"), current_user, class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to t(".setting"), "#", class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to t(".logout"), logout_path, method: :delete, class: "nav-link" %>
-              </li>
-            </ul>
+          <li class="nav-item">
+            <%= link_to t(".payment"), admin_payments_path, class: "nav-link" %>
           </li>
         </ul>
       </div>

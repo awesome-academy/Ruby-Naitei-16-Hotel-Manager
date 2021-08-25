@@ -36,7 +36,7 @@
           <% if logged_in? %>
             <li class="nav-item submenu dropdown">
               <%= link_to "#", class:"nav-link dropdown-toggle", "data-toggle": "dropdown" do %>
-                <%= t ".account" %>
+                <%= current_user.name %>
               <% end %>
               <ul class="dropdown-menu">
                 <li class="nav-item">
