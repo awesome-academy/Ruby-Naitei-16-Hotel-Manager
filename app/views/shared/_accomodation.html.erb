@@ -7,6 +7,8 @@
     <div class="row mb_30">
       <% if @room_types.any? %>
         <%= render @room_types, origin: local_assigns[:origin] %>
+      <% else %>
+        <p class="text-center out-room"><%= t ".out_of_room" %></p>
       <% end %>
     </div>
   </div>

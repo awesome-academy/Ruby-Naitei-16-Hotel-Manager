@@ -39,6 +39,8 @@
             <tbody>
               <% if @bookings.any? %>
                 <%= render @bookings %>
+              <% else %>
+                <p class="text-center no-record"><%= t ".no_booking" %></p>
               <% end %>
             </tbody>
           </table>
@@ -65,6 +67,8 @@
             <tbody>
               <% if @payments.any? %>
                 <%= render @payments %>
+              <% else %>
+                <p class="text-center no-record"><%= t ".no_payment" %></p>
               <% end %>
             </tbody>
           </table>

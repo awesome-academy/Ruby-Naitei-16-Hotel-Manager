@@ -17,7 +17,7 @@
 
     <% if @rooms.present? %>
       <p><%= t ".can_book" %></p>
-      <%= link_to t(".book"), "#", class: "btn btn-primary" %>
+      <%= link_to t(".book"), book_path, class: "btn btn-primary" %>
     <% else %>
       <p><%= t ".booked" %></p>
     <% end %>

@@ -61,6 +61,7 @@ en:
                 you may be very confused at the<br> difference in price.
                 You may see some for as low as $.17 each."
       signup: "Sign up now!"
+      book_now: "Book now"
     testimonial:
       title: "Reviews of the staff"
       subtitle: "Our staff are young, enthusiastic people;
@@ -122,6 +123,8 @@ en:
       created_date: "Created Date"
       total: "Total"
       is_paid: "Status"
+      no_booking: "No bookings yet"
+      no_payment: "No bill"
   rooms:
     show:
       title: "Room "
@@ -208,7 +211,7 @@ en:
         email: "Email *"
         password: "Password *"
       user:
-        name: "User Name *"
+        name: "Name *"
         email: "Email *"
         gender: "Gender *"
         phone: "Phone *"
@@ -251,6 +254,7 @@ en:
       title: "Hotel Accomodation"
       subtitle: "We all live in an age that belongs to the young at heart.
                 Life that is becoming extremely fast."
+      out_of_room: "out of room"
     booking_form:
       arrival: "Arrival Date"
       departure: "Departure Date"

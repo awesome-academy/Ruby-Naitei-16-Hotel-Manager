@@ -4,7 +4,7 @@ module UsersHelper
   end
 
   def select_role
-    User.roles.map{|s| [t(".#{s[0]}"), s[0]]}
+    User.roles.except("admin").map{|s| [t(".#{s[0]}"), s[0]]}
   end
 
   def select_default_ava user

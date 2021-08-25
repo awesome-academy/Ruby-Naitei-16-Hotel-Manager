@@ -1,7 +1,7 @@
 module RoomTypesHelper
-  def link_address origin
+  def link_address origin, id
     if origin == "booking"
-      "#room_type_path"
+      room_type_path(id)
     elsif origin == "home"
       book_path
     end

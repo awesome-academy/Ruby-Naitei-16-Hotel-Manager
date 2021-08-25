@@ -61,6 +61,7 @@ vi:
                     bạn có thể bối rối về sự khác biệt<br> về giá.
                     Bạn có thể thấy một số băng giá thấp tới 0,17 đô la."
       signup: "Đăng ký ngay!"
+      book_now: "Đặt ngay"
     testimonial:
       title: "Đánh giá về đội ngũ nhân viên"
       subtitle: "Đội ngũ nhân viên của chúng tôi là những người trẻ trung, nhiệt huyết;
@@ -120,6 +121,8 @@ vi:
       created_date: "Ngày tạo"
       tổng số: "Tổng số"
       is_paid: "Trạng thái"
+      no_booking: "Không có đơn đặt phòng nào"
+      no_payment: "Không có hóa đơn nào"
   rooms:
     show:
       title: "Phòng "
@@ -256,6 +259,7 @@ vi:
       subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về
                 những người trẻ.
                 Cuộc sống đang trở nên cực kỳ nhanh chóng."
+      out_of_room: "hết phòng"
     booking_form:
       arrival: "Ngày tới"
       departure: "Ngày về"

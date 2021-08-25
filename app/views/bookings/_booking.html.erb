@@ -1,12 +1,12 @@
 <tr id="booking-<%= booking.id %>">
-  <td><%= link_to booking.room.room_number, "#" %></td>
+  <td><%= link_to booking.room_number, "#" %></td>
   <td><%= link_to booking.room.room_type.name, "#" %></td>
   <td><%= booking.updated_at.to_date %></td>
   <td><%= booking.checkin.to_date %></td>
   <td><%= booking.checkout.to_date %></td>
   <td><%= total_calculate booking %> <%= t "currency" %></td>
   <td><%= checkout_to_text booking.is_checkout %></td>
-  <% if is_deadline_expired? booking.created_at %>
+  <% if is_deadline_expired?(booking.created_at) || booking.is_checkout %>
     <td colspan="2"></td>
   <% else %>
     <td>
