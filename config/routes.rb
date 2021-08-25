@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :users, except: %i(show edit update)
       resources :rooms, except: %i(index show)
       resources :room_types, except: %i(index show)
+      get "/book", to: "static_pages#book"
+      resources :bookings
     end
     root "static_pages#home"
     get "/home", to: "static_pages#home"

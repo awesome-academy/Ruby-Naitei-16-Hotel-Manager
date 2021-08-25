@@ -281,6 +281,8 @@ en:
         delete: "Delete"
       index:
         title: "Staff management"
+      user:
+        confirm: "Are you sure"
     rooms:
       new:
         title: "Create Room"
@@ -317,3 +319,35 @@ en:
         success: "Delete room type success"
         fail: "Delete room type fail"
       not_found: "Room type not found"
+    bookings:
+      booking:
+        checkout: "checkout"
+        non_checkout: "not checkout yet"
+        confirm: "Are u sure"
+      create:
+        success: "Booking successful. Please see details below!"
+        fail: "Booking failed."
+      booking_form:
+        arrival: "Arrival Date"
+        departure: "Departure Date"
+        room_type: "-- Select Room Type --"
+        number: "-- Select numbers --"
+        book_now: "Book Now"
+        book: "Book"
+        your_room: "Your Room"
+      index:
+        room_number: "Room number"
+        room_type: "Room type"
+        booking_date: "Book date"
+        checkin: "Checkin date"
+        checkout: "CHeckout date"
+        is_checkout: "Checkout ?"
+        total: "Total"
+        edit: "Edit"
+        cancel: "Cancel"
+        booking_title: "Booking Detail"
+        booking_subtitle: "Feel the best service in the world"
+        not_found: "No booking at the moment"
+      edit:
+        header: "Change booking for room : "
+        submit: "Change"

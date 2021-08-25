@@ -1,5 +1,7 @@
 class Admin::UsersController < AdminController
   before_action :load_user, except: %i(index new create)
+  before_action :is_staff?, only: %i(new create destroy)
+
   def new
     @user = User.new
   end
@@ -34,11 +36,9 @@ class Admin::UsersController < AdminController
     params.require(:user).permit User::PERMITTED2
   end
 
-  def load_user
-    @user = User.find_by params[:id]
-    return if @user
+  def is_staff?
+    return unless current_user.staff?
 
-    flash[:danger] = t "not_found"
     redirect_to admin_path
   end
 end
