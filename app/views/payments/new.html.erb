@@ -34,9 +34,10 @@
                   <% @non_checkout_bookings.each do |booking| %>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                       <h5 class="my-0 rooms-list">
-                        <span><%= t ".room" %> <%= booking.room.room_number %></span>
+                        <span><%= t ".room" %> <%= booking.room_number %></span>
                         <%= booking_calculate booking %> <%= t "currency" %>
                       </h5>
+                      <p><%= booking.duration %></p>
                       <p class="text-muted"><%= booking.room.room_type.name %></p>
                     </li>
                   <% end %>

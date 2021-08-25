@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on('turbolinks:load', function () {
   setTimeout(function () {
     $('.flash-alert').remove();
   }, 1500);

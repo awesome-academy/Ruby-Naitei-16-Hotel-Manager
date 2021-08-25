@@ -2,6 +2,9 @@ class Booking < ApplicationRecord
   belongs_to :room
   belongs_to :user
 
+  delegate :room_number, to: :room
+  delegate :duration, to: :class
+
   attr_accessor :room_type, :total
 
   PERMITTED = %i(room_id user_id checkin checkout).freeze
@@ -34,6 +37,10 @@ class Booking < ApplicationRecord
       params[:booking].merge! room_id: room_id, user_id: user_id
       params.require(:booking).permit PERMITTED
     end
+  end
+
+  def duration
+    [checkin.to_date, checkout.to_date].join(" -> ")
   end
 
   def update_room_status

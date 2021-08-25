@@ -8,8 +8,11 @@
         <h6><%= t ".subtitle1" %></h6>
         <h2><%= t ".subtitle2" %></h2>
         <p><%= t ".content_html" %></p>
-        <%= link_to t(".signup"), new_user_path,
-            class: "btn theme_btn button_hover" %>
+        <% if logged_in? %>
+          <%= link_to t(".book_now"), book_path, class: "btn theme_btn button_hover" %>
+        <% else %>
+          <%= link_to t(".signup"), new_user_path, class: "btn theme_btn button_hover" %>
+        <% end %>
       </div>
     </div>
   </div>
