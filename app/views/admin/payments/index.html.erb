@@ -1,0 +1,19 @@
+<h1><%= t ".title" %></h1>
+<div class="table-responsive">
+  <table id="mytable" class="table table-bordred table-striped">
+    <thead>
+      <th><%= t ".id" %></th>
+      <th><%= t ".amount" %></th>
+      <th><%= t "is_paid" %></th>
+      <th><%= t ".payment_date" %></th>
+      <th><%= t ".change_paid_status" %></th>
+    </thead>
+    <tbody>
+      <% if @payments.any? %>
+        <%= render @payments %>
+      <% else %>
+        <p><%= t ".not_found" %></p>
+      <% end %>
+    </tbody>
+  </table>
+</div>

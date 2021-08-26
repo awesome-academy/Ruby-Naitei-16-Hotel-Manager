@@ -1,0 +1,27 @@
+<% provide :title, show_room(@room) %>
+<%= render "shared/breadcrumb" %>
+<div class="wrapper large-padding-top">
+  <div class="content">
+    <h1><%= @room.description %><br /></h1>
+    <p><%= t ".type" %><%= @room_type.name %><br /></p>
+    <ul>
+      <li><%= @room_type.description %></li>
+      <li><%= t ".bed" %><%= @room_type.bed_num %></li>
+      <% if @room_type.air_conditioner %>
+        <li><%= t ".air_conditioner" %></li>
+      <% end %>
+      <li><%= t ".cost" %><%= @room_type.cost %><%= t ".per_day" %></li>
+    </ul>
+      <% if @room.is_available %>
+        <p><%= t ".can_book" %></p>
+        <%= link_to t(".book"), book_path, class: "btn btn-primary" %>
+      <% else %>
+        <p><%= t ".booked" %></p>
+      <% end %>
+  </div>
+  <% if current_user&.admin? %>
+    <%= link_to [:admin, @room], :remote => true, method: :delete, data: {confirm: t(".confirm")} do %>
+      <%= t(".submit") %>
+    <% end %>
+  <% end %>
+</div>

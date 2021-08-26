@@ -21,6 +21,8 @@ en:
         list_staff: "List staff"
         list_customer: "List customer"
         add_room: "Add room"
+        add_room_type: "Add room type"
+        payment: "Payment"
         rm_room: "Remove room"
         list_room: "List room"
     root_title: "Management Hotel"
@@ -351,3 +353,10 @@ en:
       edit:
         header: "Change booking for room : "
         submit: "Change"
+    payments:
+      change_paid_status:
+        success: "Update status success"
+        fail: "Update status fail"
+      index:
+        not_found: "Not found"
+        title: "Payments list"

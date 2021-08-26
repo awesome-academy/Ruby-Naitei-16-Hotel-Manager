@@ -1,0 +1,16 @@
+<tr id="payment-<%= payment.id %>">
+  <td><%= payment.id %></td>
+  <td><%= payment.amount %><%= t "currency" %></td>
+  <td><%= payment.is_paid %></td>
+  <% if payment.is_paid %>
+    <td><%= payment.payment_date %></td>
+    <td></td>
+  <% else %>
+    <td></td>
+    <td>
+      <%= link_to change_paid_status_admin_payment_path(payment), method: "patch", class: "btn btn-default" do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+      <% end %>
+    </td>
+  <% end %>
+</tr>

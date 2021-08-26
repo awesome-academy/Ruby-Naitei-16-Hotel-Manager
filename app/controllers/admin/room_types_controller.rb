@@ -1,5 +1,5 @@
 class Admin::RoomTypesController < AdminController
-  before_action :load_room_type, only: %i(edit update destroy)
+  before_action :load_room_type, except: %i(new create)
   def new
     @room_type = RoomType.new
   end
@@ -17,6 +17,11 @@ class Admin::RoomTypesController < AdminController
   end
 
   def edit; end
+
+  def show
+    @rooms = Room.available.by_room_type_id @room_type.id
+    render "room_types/show"
+  end
 
   def update
     if @room_type.update room_type_params
