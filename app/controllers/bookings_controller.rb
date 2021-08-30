@@ -40,7 +40,7 @@ class BookingsController < ApplicationController
     redirect_to current_user
   rescue ActiveRecord::RecordInvalid
     flash[:danger] = t ".delete_fail"
-    render :delete
+    redirect_to current_user
   end
 
   private

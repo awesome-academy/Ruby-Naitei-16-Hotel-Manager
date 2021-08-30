@@ -25,11 +25,14 @@ gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
 
 group :development, :test do
+  gem "factory_bot_rails"
   gem "pry-rails"
   gem "rspec-rails", "~> 4.0.1"
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
+  gem "simplecov"
+  gem "simplecov-rcov"
 end
 
 group :development do
@@ -41,7 +44,11 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
+  gem "database_cleaner", "~> 1.5"
+  gem "rails-controller-testing"
+  gem "rspec-mocks"
   gem "selenium-webdriver"
+  gem "shoulda-matchers", "~> 3.0", require: false
   gem "webdrivers"
 end
 
