@@ -4,5 +4,6 @@ FactoryBot.define do
     association :room, factory: :room
     checkin {DateTime.now + 1.day}
     checkout {DateTime.now + 2.day}
+    is_checkout {false}
   end
 end

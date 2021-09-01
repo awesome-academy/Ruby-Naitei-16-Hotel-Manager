@@ -8,17 +8,10 @@ class Payment < ApplicationRecord
   validates :amount, presence: true,
                      numericality: {greater_than: Settings.validation.item.min}
 
-  private
-
   def update_after_checkout
-    Booking.transaction do
+    User.transaction do
       user.bookings.non_checkout.update_all(is_checkout: true)
-      Room.transaction do
-        user.rooms.not_available.update_all(is_available: true)
-        raise ActiveRecord::Rollback
-      end
+      user.rooms.not_available.update_all(is_available: true)
     end
-  rescue ActiveRecord::StatementInvalid
-    false
   end
 end
