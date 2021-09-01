@@ -43,6 +43,8 @@ class Booking < ApplicationRecord
     [checkin.to_date, checkout.to_date].join(" -> ")
   end
 
+  private
+
   def update_room_status
     room.update! is_available: true
   end
