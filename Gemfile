@@ -8,6 +8,7 @@ gem "bcrypt", "3.1.16"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "bootstrap4-kaminari-views"
+gem "cancancan"
 gem "config"
 gem "date_validator"
 gem "faker", "2.1.2"

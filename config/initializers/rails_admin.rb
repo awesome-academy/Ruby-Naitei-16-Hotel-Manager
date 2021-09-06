@@ -1,4 +1,8 @@
 RailsAdmin.config do |config|
+  config.authorize_with :cancancan
+  config.parent_controller = "ApplicationController"
+  config.current_user_method { current_user }
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
