@@ -13,4 +13,13 @@ class Room < ApplicationRecord
   scope :available, ->{where(is_available: true)}
   scope :not_available, ->{where(is_available: false)}
   scope :by_room_type_id, ->(room_type){where(room_type_id: room_type)}
+
+  rails_admin do
+    create do
+      exclude_fields :bookings, :users, :reviews
+    end
+    edit do
+      exclude_fields :bookings, :users, :reviews
+    end
+  end
 end
