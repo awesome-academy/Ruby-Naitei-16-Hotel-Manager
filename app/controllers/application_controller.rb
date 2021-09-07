@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   private
+  rescue_from CanCan::AccessDenied do
+    render file: Settings.not_found_page, status: :not_found, layout: false
+  end
+
   def set_locale
     locale = params[:locale].to_s.strip.to_sym
     check = I18n.available_locales.include?(locale)
