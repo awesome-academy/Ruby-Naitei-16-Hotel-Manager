@@ -1,0 +1,30 @@
+%ul
+  %li
+    %b.statistic-item= t ".total_customer"
+    %span
+    = @total_customer
+    = t ".customer"
+<br>
+%center= column_chart @new_customer, title: t(".user_chart_title"), width: "75%",
+xtitle: t(".user_chart_x"), ytitle: t(".user_chart_y")
+<br>
+
+<br>
+%center= line_chart @revenue_by_month, title: t(".recent_revenue"), width: "75%", suffix: t("currency"), curve: false,
+xtitle: t(".revenue_x"), ytitle: t(".revenue_y")
+<br>
+
+<br>
+%ul.mt-3.mb-3
+  %li
+    %b.statistic-item= t ".total_revenue"
+    %span= @total_revenue
+    = t "currency"
+  %li
+    %b= t ".room_type_revenue"
+<br>
+<br>
+.chart-row(style="display: flex; justify-content: space-between;")
+  = pie_chart @booking_by_room_type, title: t(".rt_booking_chart"), suffix: t(".room"), width: "50%", donut: true
+  = pie_chart @revenue_by_room_type, title: t(".rt_revenue_chart"), suffix: t("currency"), width: "50%", donut: true
+<br>

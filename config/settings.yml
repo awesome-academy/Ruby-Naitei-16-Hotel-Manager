@@ -74,3 +74,6 @@ default_ava:
   male: "male.jpg"
   female: "female.jpg"
 due_time: 720
+statistic:
+  default:
+    month_ago: 6

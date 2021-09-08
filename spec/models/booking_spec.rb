@@ -13,6 +13,20 @@ RSpec.describe Booking, type: :model do
     }
   })}
 
+  describe ".count_by_room_type" do
+    it "return bookings group by room type" do
+      booking.save
+      bookings = Booking.joins(room: :room_type)
+                        .where(
+                          "bookings.created_at >= ?",
+                          Time.zone.now - Settings.statistic.default.month_ago.months
+                        )
+                        .group(:room_type_id)
+                        .count
+      expect(Booking.count_by_room_type).to eq bookings
+    end
+  end
+
   describe "create multiple bookings" do
     it "return true if successfully" do
       expect(Booking.create_bookings(params, room_ids, user.id)).to_not eq false

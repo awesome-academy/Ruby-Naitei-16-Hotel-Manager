@@ -16,6 +16,15 @@ class Booking < ApplicationRecord
 
   scope :non_checkout, ->{where is_checkout: false}
   scope :recent, ->{order created_at: :desc}
+  scope :count_by_room_type, (lambda do
+    joins(room: :room_type)
+      .where(
+        "bookings.created_at >= ?",
+        Time.zone.now - Settings.statistic.default.month_ago.months
+      )
+      .group(:room_type_id)
+      .count
+  end)
 
   class << self
     def create_bookings params, room_ids, user_id

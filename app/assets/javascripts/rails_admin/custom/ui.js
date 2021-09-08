@@ -1,3 +1,7 @@
+//= require chartkick
+//= require Chart.bundle
+//= require turbolinks
+
 $(document).on('ready pjax:success', function () {
   handleActiveBase();
   function handleActiveBase() {
