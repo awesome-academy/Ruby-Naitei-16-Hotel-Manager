@@ -26,13 +26,13 @@
         <div class="table-responsive">
           <table id="mytable" class="table table-bordred table-striped">
             <thead>
-              <th><%= t ".room_number" %></th>
-              <th><%= t ".room_type" %></th>
-              <th><%= t ".booking_date" %></th>
-              <th><%= t ".checkin" %></th>
-              <th><%= t ".checkout" %></th>
+              <th><%= sort_link @q_booking, :room_number, t(".room_number") %></th>
+              <th><%= sort_link @q_booking, :name, t(".room_type") %></th>
+              <th><%= sort_link @q_booking, :created_at, t(".booking_date") %></th>
+              <th><%= sort_link @q_booking, :checkin, t(".checkin") %></th>
+              <th><%= sort_link @q_booking, :checkout, t(".checkout") %></th>
               <th><%= t ".total" %></th>
-              <th><%= t ".is_paid" %></th>
+              <th><%= sort_link @q_booking, :is_checkout, t(".is_checkout") %></th>
               <th><%= t ".edit" %></th>
               <th><%= t ".cancel" %></th>
             </thead>
@@ -59,10 +59,10 @@
         <div class="table-responsive">
           <table id="mytable" class="table table-bordred table-striped">
             <thead>
-              <th><%= t ".bill_id" %></th>
-              <th><%= t ".created_date" %></th>
-              <th><%= t ".total" %></th>
-              <th><%= t ".is_paid" %></th>
+              <th><%= sort_link @q_payment, :id, t(".bill_id") %></th>
+              <th><%= sort_link @q_payment, :created_at, t(".created_date") %></th>
+              <th><%= sort_link @q_payment, :amount, t(".total") %></th>
+              <th><%= sort_link @q_payment, :is_paid, t(".is_paid") %></th>
             </thead>
             <tbody>
               <% if @payments.any? %>

@@ -52,7 +52,7 @@ vi:
   static_pages:
     home:
       title: "Home"
-    booking:
+    user_booking:
       title: "Đặt phòng"
     help:
       title: "Contact"
@@ -264,6 +264,7 @@ vi:
                 những người trẻ.
                 Cuộc sống đang trở nên cực kỳ nhanh chóng."
       out_of_room: "hết phòng"
+      search: "Tìm kiếm"
     booking_form:
       arrival: "Ngày tới"
       departure: "Ngày về"

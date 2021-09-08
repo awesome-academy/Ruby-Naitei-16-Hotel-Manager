@@ -4,6 +4,12 @@
       <h2 class="title_color"><%= t ".title" %></h2>
       <p><%= t ".subtitle" %></p>
     </div>
+    <div class="row accomodation_item">
+      <%= form_tag @static_pages, method: :get do %>
+        <%= text_field_tag :search_key, params[:search_key], placeholder: t(".search"), class: "col-md-3" %>
+        <%= submit_tag t(".search"), class: "col-md-1 btn-primary" %>
+      <% end %>
+    </div>
     <div class="row mb_30">
       <% if @room_types.any? %>
         <%= render @room_types, origin: local_assigns[:origin] %>
