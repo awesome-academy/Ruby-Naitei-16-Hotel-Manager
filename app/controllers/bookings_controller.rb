@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   include BookingsHelper
 
-  before_action :logged_in_user
+  before_action :authenticate_user!
   before_action :check_numberic, :booked_room_ids, only: :create
   before_action :load_booking, except: :create
   before_action :check_change_booking, only: %i(update destroy)

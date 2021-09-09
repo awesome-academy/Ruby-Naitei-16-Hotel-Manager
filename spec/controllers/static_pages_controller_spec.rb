@@ -1,5 +1,4 @@
 require "rails_helper"
-include SessionsHelper
 
 RSpec.describe StaticPagesController, type: :controller do
   let(:user) {FactoryBot.create :user}
@@ -12,7 +11,7 @@ RSpec.describe StaticPagesController, type: :controller do
   end
 
   describe "GET /booking" do
-    before {log_in user}
+    before {sign_in user}
     it "should render booking_path" do
       10.times do
         FactoryBot.create :room_type

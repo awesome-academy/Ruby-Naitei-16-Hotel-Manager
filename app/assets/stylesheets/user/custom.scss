@@ -226,12 +226,15 @@ input {
 }
 
 .checkbox {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
 
-  span {
-    font-weight: normal;
-    margin-left: 20px;
+  label {
+    padding-left: 0px;
+  }
+
+  input {
+    left: -90px;
   }
 }
 

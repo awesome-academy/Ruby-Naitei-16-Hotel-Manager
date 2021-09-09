@@ -5,10 +5,7 @@ Rails.application.routes.draw do
     get "/home", to: "static_pages#home"
     get "/help", to: "static_pages#help"
     get "/book", to: "static_pages#user_booking"
-
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
+    devise_for :users, controllers: {registrations: "users"}
     resources :users
     resources :rooms, only: %i(index show)
     resources :room_types, only: :show

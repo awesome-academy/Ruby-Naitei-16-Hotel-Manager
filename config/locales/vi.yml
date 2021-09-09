@@ -74,25 +74,15 @@ vi:
       title: "Nhận xét mới nhất"
       subtitle: "Những bài viết đánh giá từ khách hàng là
                 động lực để chúng tôi tiếp tục phát triển."
-  sessions:
-    new:
-      new_user: "Người dùng mới?"
-      login: "Đăng nhập"
-      sign_up: "Đăng ký ngay!"
-      remember_me: "Ghi nhớ đăng nhập"
-      forgot_password: "Quên mật khẩu?"
-    create:
-      required_activate_email: "Tài khoản chưa được xác thực.
-                                Kiểm tra email của bạn để hoàn thành xác thực."
-      login_fail: "Email hoặc mật khẩu không đúng!"
   users:
     new:
       title: "Đăng kí"
+      submit: "Đăng kí"
     form:
       male: "Nam"
       female: "Nữ"
-      select: "CHọn giới tính "
-      submit: "Submit"
+      select: "Chọn giới tính "
+      submit: "Đăng kí"
     edit:
       title: "Thay đổi"
     create:
@@ -219,6 +209,7 @@ vi:
         phone: "Số điện thoại *"
         password: "Mật khẩu *"
         password_confirmation: "Xác nhận mật khẩu *"
+        remember_me: "Ghi nhớ đăng nhập"
       room:
         room_number: "Số phòng *"
         room_type_id: "Kiểu phòng *"

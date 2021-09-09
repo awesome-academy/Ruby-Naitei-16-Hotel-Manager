@@ -4,7 +4,10 @@ RailsAdmin.config do |config|
   config.authorize_with :cancancan
   config.main_app_name = ["Hotel Manager", "Royal Hotel"]
   config.parent_controller = "ApplicationController"
-  config.current_user_method { current_user }
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method &:current_user
   config.default_items_per_page = 5
   config.excluded_models = %w[Review ActiveStorage::Blob ActiveStorage::Attachment ActiveStorage::VariantRecord]
   config.model "User" do
