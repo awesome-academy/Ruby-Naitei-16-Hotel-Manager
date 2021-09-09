@@ -28,6 +28,18 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  scope :customer, ->{where(role: :customer)}
+  scope :new_user, (lambda do |month_ago|
+    where("created_at >= ?", Time.zone.now - month_ago.months)
+  end)
+  scope :new_user_by_month, (lambda do
+    group_by_month(
+      :created_at,
+      last: Settings.statistic.default.month_ago,
+      format: "%b %Y"
+    ).count
+  end)
+
   class << self
     def digest string
       min_cost = ActiveModel::SecurePassword.min_cost

@@ -267,97 +267,24 @@ en:
       book: "Book"
       your_room: "Your Room"
   admin:
-    users:
-      not_found: "User not found"
-      new:
-        submit: "Create account"
-        title: "Create account for other"
-      create:
-        success: "Create success"
-        fail: "Create fail"
-      destroy:
-        delete_success: "Delete success"
-        delete_fail: "Delete fail"
-      user:
-        role: "Role :"
-        created_at: "Created at :"
-        delete: "Delete"
-      index:
-        title: "Staff management"
-      user:
-        confirm: "Are you sure"
-    rooms:
-      new:
-        title: "Create Room"
-        select: "Select room type"
-        submit: "Create room"
-      create:
-        success: "Create room success"
-        fail: "Create room fail"
-      edit:
-        title: "Edit room info"
-        submit: "Update room"
-      update:
-        success: "Update room success"
-        fail: "Update room fail"
-      destroy:
-        success: "Delete room success"
-        fail: "Delete room fail"
-      not_found: "Room not found"
-    room_types:
-      new:
-        title: "Create Room Type"
-        select: "Select"
-        submit: "Create new room type"
-      create:
-        success: "Create room type success"
-        fail: "Create room type fail"
-      edit:
-        title: "Edit room type info"
-        submit: "Update room type"
-      update:
-        success: "Update room type success"
-        fail: "Update room type fail"
-      destroy:
-        success: "Delete room type success"
-        fail: "Delete room type fail"
-      not_found: "Room type not found"
-    bookings:
-      booking:
-        checkout: "checkout"
-        non_checkout: "not checkout yet"
-        confirm: "Are u sure"
-      create:
-        success: "Booking successful. Please see details below!"
-        fail: "Booking failed."
-      booking_form:
-        arrival: "Arrival Date"
-        departure: "Departure Date"
-        room_type: "-- Select Room Type --"
-        number: "-- Select numbers --"
-        book_now: "Book Now"
-        book: "Book"
-        your_room: "Your Room"
-      index:
-        room_number: "Room number"
-        room_type: "Room type"
-        booking_date: "Book date"
-        checkin: "Checkin date"
-        checkout: "CHeckout date"
-        is_checkout: "Checkout ?"
-        total: "Total"
-        edit: "Edit"
-        cancel: "Cancel"
-        booking_title: "Booking Detail"
-        booking_subtitle: "Feel the best service in the world"
-        not_found: "No booking at the moment"
-      edit:
-        header: "Change booking for room : "
-        submit: "Change"
-    payments:
-      change_paid_status:
-        success: "Update status success"
-        fail: "Update status fail"
-      index:
-        not_found: "Not found"
-        title: "Payments list"
+    actions:
+      statistics:
+        menu: "Statistic"
+        title: "SITE ADMINISTRATION"
+        breadcrumb: "Statistic"
+  rails_admin:
+    main:
+      statistics:
+        total_customer: "Total number of customers: "
+        user_chart_title: "Recent number of new users"
+        total_revenue: "Total revenue in the last 6 months: "
+        room_type_revenue: "Revenue by room type: "
+        rt_revenue_chart: "Revenue"
+        rt_booking_chart: "Booking"
+        room: " room(s)"
+        customer: " customer(s)"
+        recent_revenue: "Recent Revenue"
+        user_chart_x: "Month"
+        user_chart_y: "New Customers"
+        revenue_x: "Month"
+        revenue_y: "Revenue"

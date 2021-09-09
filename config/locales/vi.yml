@@ -274,97 +274,24 @@ vi:
       book: "Đặt"
       your_room: "phòng"
   admin:
-    users:
-      not_found: "Không tìm thấy tài khoản"
-      new:
-        submit: "Tạo tài khoản"
-        title: "Tạo tài khoản"
-      create:
-        success: "Tạo thành công"
-        fail: "Tạo thất bại"
-      destroy:
-        delete_success: "Xóa thành công"
-        delete_fail: "Xóa thất bại"
-      user:
-        role: "Vi tri :"
-        created_at: "Thoi gian tao :"
-        delete: "Xóa"
-      index:
-        title: "Quản lí nhân viên"
-      user:
-        confirm: "Chắc chưa ?"
-    rooms:
-      new:
-        title: "Tạo phòng"
-        select: "Chọn kiểu phòng"
-        submit: "Tạo phòng mới"
-      create:
-        success: "Tạo phòng thành công"
-        fail: "Tạo phòng thất bại"
-      edit:
-        title: "Thay đổi thông tin phòng"
-        submit: "Cập nhật phòng"
-      update:
-        success: "Cập nhật phòng thành công"
-        fail: "Cập nhật phòng thất bại"
-      destroy:
-        success: "Xóa phòng thành công"
-        fail: "Xóa phòng thất bại"
-      not_found: "Không tìm thấy phòng"
-    room_types:
-      new:
-        title: "Tạo kiểu phòng"
-        select: "Lựa chọn"
-        submit: "Tạo kiểu phòng mới"
-      create:
-        success: "Tạo kiểu phòng thành công"
-        fail: "Tạo kiểu phòng thất bại"
-      edit:
-        title: "Thay đổi thông tin kiểu phòng"
-        submit: "Cập nhật kiểu phòng"
-      update:
-        success: "Cập nhật kiểu phòng thành công"
-        fail: "Cập nhật kiểu phòng thất bại"
-      destroy:
-        success: "Xóa kiểu phòng thành công"
-        fail: "Xóa kiểu phòng thất bại"
-      not_found: "Không tìm thấy kiểu phòng"
-    bookings:
-      booking:
-        checkout: "checkout"
-        non_checkout: "chưa checkout"
-        confirm: "Chắc chưa ?"
-      create:
-        success: "Đặt phòng thành công. Vui lòng xem thông tin chi tiết bên dưới!"
-        fail: "Đặt phòng thất bại."
-      booking_form:
-        arrival: "Ngày tới"
-        departure: "Ngày về"
-        room_type: "-- Chọn Loại Phòng --"
-        number: "-- Chọn số lượng --"
-        book_now: "Đặt ngay"
-        book: "Đặt"
-        your_room: "phòng"
-      index:
-        room_number: "Số phòng "
-        room_type: "Loại phòng"
-        booking_date: "Ngày đặt "
-        checkin: "Ngày nhận phòng"
-        checkout: "Ngày trả phòng"
-        is_checkout: "Trả phòng"
-        total: "Tổng"
-        edit: "Sửa"
-        cancel: "Xóa"
-        booking_title: "THông tin đặt phòng"
-        booking_subtitle: "Cảm nhận dịch vụ tốt nhất thế giới "
-        not_found: "Không có đặt phòng hiện tại"
-      edit:
-        header: "Thay đổi giao dịch đặt phòng số :"
-        submit: "Thay đổi"
-    payments:
-      change_paid_status:
-        success: "Cập nhật trạng thái thành công"
-        fail: "Cập nhật trạng thái thất bại"
-      index:
-        not_found: "Không tìm thấy"
-        title: "Danh sách thanh toán"
+    actions:
+      statistics:
+        menu: "Thống kê"
+        title: "TRANG QUẢN LÝ"
+        breadcrumb: "Thống kê"
+  rails_admin:
+    main:
+      statistics:
+        total_customer: "Tổng số khách hàng: "
+        user_chart_title: "Lượng người dùng mới gần đây"
+        total_revenue: "Tổng doanh thu trong 6 tháng qua: "
+        room_type_revenue: "Doanh thu theo loại phòng: "
+        rt_revenue_chart: "Doanh thu"
+        rt_booking_chart: "Đặt phòng"
+        room: " phòng"
+        customer: " khách hàng"
+        recent_revenue: "Doanh thu gần đây"
+        user_chart_x: "Tháng"
+        user_chart_y: "Khách hàng Mới"
+        revenue_x: "Tháng"
+        revenue_y: "Doanh thu"

@@ -3,6 +3,7 @@ RSpec.describe Payment, type: :model do
   let(:user) {FactoryBot.create :user}
   let(:room) {FactoryBot.create :room}
   let(:booking) {FactoryBot.create :booking, user: user, room: room}
+
   describe "validations" do
     it do
       should validate_numericality_of(:amount)
@@ -13,6 +14,27 @@ RSpec.describe Payment, type: :model do
 
   describe "associations" do
     it { should belong_to :user }
+  end
+
+  describe ".total_revenue" do
+    it "return total revenue" do
+      total = Payment.where(
+        "created_at >= ?",
+        Time.zone.now - Settings.statistic.default.month_ago.months
+      ).sum(:amount)
+      expect(Payment.total_revenue).to eq total
+    end
+  end
+
+  describe ".revenue_by_month" do
+    it "return revenue by each month" do
+      revenue = Payment.group_by_month(
+        :created_at,
+        last: Settings.statistic.default.month_ago,
+        format: "%b %Y"
+      ).sum(:amount)
+      expect(Payment.revenue_by_month).to eq revenue
+    end
   end
 
   describe "#create" do
