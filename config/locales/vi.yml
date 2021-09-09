@@ -274,24 +274,178 @@ vi:
       book: "Đặt"
       your_room: "phòng"
   admin:
+    rails_admin:
+      main:
+        statistics:
+          total_customer: "Tổng số khách hàng: "
+          user_chart_title: "Lượng người dùng mới gần đây"
+          total_revenue: "Tổng doanh thu trong 6 tháng qua: "
+          room_type_revenue: "Doanh thu theo loại phòng: "
+          rt_revenue_chart: "Doanh thu"
+          rt_booking_chart: "Đặt phòng"
+          room: " phòng"
+          customer: " khách hàng"
+          recent_revenue: "Doanh thu gần đây"
+          user_chart_x: "Tháng"
+          user_chart_y: "Khách hàng Mới"
+          revenue_x: "Tháng"
+          revenue_y: "Doanh thu"
+    js:
+      true: True
+      false: False
+      is_present: Is present
+      is_blank: Is blank
+      date: Date ...
+      between_and_: Between ... and ...
+      today: Today
+      yesterday: Yesterday
+      this_week: This week
+      last_week: Last week
+      time: Time ...
+      number: Number ...
+      contains: Contains
+      is_exactly: Is exactly
+      starts_with: Starts with
+      ends_with: Ends with
+      too_many_objects: "Quá nhiều đối tượng , sử dụng thanh search bên trên"
+      no_objects: "Không tìm thấy đối tượng "
+    loading: "Đang tải..."
+    toggle_navigation: Toggle navigation
+    home:
+      home_page: "Trang chủ"
+    pagination:
+      previous: "&laquo; Trước"
+      next: "Sau &raquo;"
+      truncate: "…"
+    misc:
+      search: "Tìm kiếm"
+      filter: "Lọc"
+      reset_filters: "Lập lại bộ lọc"
+      refresh: "Refresh"
+      show_all: "Hiển thị tất cả "
+      add_filter: "Thêm lọc"
+      bulk_menu_title: "Mục đã chọn"
+      remove: "Xóa"
+      add_new: "Thêm mới"
+      chose_all: "CHọn tất cả"
+      clear_all: "Xóa hết"
+      up: "Trên"
+      down: "Dưới"
+      navigation: "Thanh dẫn"
+      root_navigation: "Thao tác"
+      navigation_static_label: "ĐƯỜng dẫn "
+      log_out: "Đăng xuất"
+      time_ago: "%{time} trước"
+      ago: "ago"
+      more: "Thêm %{count} %{models_name}"
+    flash:
+      successful: "%{name} thành công %{action}"
+      error: "%{name} thất bại %{action}"
+      noaction: "Không có thao tác "
+      model_not_found: "Model '%{model}' không tìm thấy"
+      object_not_found: "%{model} với id '%{id}' không tìm thấy"
+    table_headers:
+      model_name: "Tên model"
+      last_created: "Lần tạo cuối"
+      records: "Bản ghi"
+      username: "Người dùng"
+      changes: "Thay đổi"
+      created_at: "Ngày/giờ"
+      item: "Item"
+      message: "Thông báo"
     actions:
       statistics:
         menu: "Thống kê"
         title: "TRANG QUẢN LÝ"
         breadcrumb: "Thống kê"
-  rails_admin:
-    main:
-      statistics:
-        total_customer: "Tổng số khách hàng: "
-        user_chart_title: "Lượng người dùng mới gần đây"
-        total_revenue: "Tổng doanh thu trong 6 tháng qua: "
-        room_type_revenue: "Doanh thu theo loại phòng: "
-        rt_revenue_chart: "Doanh thu"
-        rt_booking_chart: "Đặt phòng"
-        room: " phòng"
-        customer: " khách hàng"
-        recent_revenue: "Doanh thu gần đây"
-        user_chart_x: "Tháng"
-        user_chart_y: "Khách hàng Mới"
-        revenue_x: "Tháng"
-        revenue_y: "Doanh thu"
+      dashboard:
+        title: "Trang Administration"
+        menu: "Dashboard"
+        breadcrumb: "Dsáchashboard"
+      index:
+        title: "Danh  %{model_label_plural}"
+        menu: "Danh sách"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "CỤ thể cho %{model_label} '%{object_label}'"
+        menu: "Hiển thị"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "Hiển thị trên app"
+      new:
+        title: "%{model_label} mới"
+        menu: "Thêm mới"
+        breadcrumb: "Mới"
+        link: "Thêm mới %{model_label}"
+        done: "Đã tạo"
+      edit:
+        title: "Sửa %{model_label} '%{object_label}'"
+        menu: "SỬA"
+        breadcrumb: "Sửa"
+        link: "Sửa %{model_label} này"
+        done: "Đã cập nhật"
+      delete:
+        title: "Xóa %{model_label} '%{object_label}'"
+        menu: "Xóa"
+        breadcrumb: "Xóa"
+        link: "Xóa '%{object_label}'"
+        done: "Đã xóa"
+      bulk_delete:
+        title: "Xóa %{model_label_plural}"
+        menu: "Xóa nhiều"
+        breadcrumb: "Xóa nhiều"
+        bulk_link: "Xóa %{model_label_plural} đã chọn"
+      export:
+        title: "Xuất %{model_label_plural}"
+        menu: "Xuất"
+        breadcrumb: "Xuất"
+        link: "Xuất ra %{model_label_plural} tìm thấy"
+        bulk_link: "Xuất những %{model_label_plural} đã chọn"
+        done: "Đã xuất"
+      history_index:
+        title: "Lịch sử %{model_label_plural}"
+        menu: "Lịch sử"
+        breadcrumb: "Lịch sử"
+      history_show:
+        title: "Lịch sử %{model_label} '%{object_label}'"
+        menu: "Lịch sử"
+        breadcrumb: "Lịch sử"
+    form:
+      cancel: "Hủy"
+      basic_info: "Thông tin cơ bản"
+      required: "bắt buộc"
+      optional: "Không bắt buộc"
+      one_char: "Thuộc tính"
+      char_length_up_to: "Tối đa "
+      char_length_of: "Độ dài của "
+      save: "Lưu"
+      save_and_add_another: "Lưu và thêm"
+      save_and_edit: "Lưu và sửa"
+      all_of_the_following_related_items_will_be_deleted:
+                    "? Thông tin đã chọn có thể đã xóa"
+      are_you_sure_you_want_to_delete_the_object: "Có chắc muốn xóa %{model_name} không"
+      confirmation: "Chắc chắn"
+      bulk_delete: "Đối tượng tiếp theo sẽ được xóa ,
+                    có thể dẫn đến xóa các đối tượng liên quan:"
+      new_model: "%{name} (mới)"
+    export:
+      confirmation: "Xuất ra %{name}"
+      select: "CHọn trường để xuất"
+      select_all_fields: "Chọn tất cả các trường "
+      fields_from: "Trường từ %{name}"
+      fields_from_associated: "Trường từ quan hệ %{name}"
+      display: "HIển thị %{name}: %{type}"
+      options_for: "Lựa chọn cho  %{name}"
+      empty_value_for_associated_objects: "<Rỗng>"
+      click_to_reverse_selection: 'Click to reverse selection'
+      csv:
+        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "Mã hóa"
+        encoding_to_help: "Chọn mã hóa đầu ra.
+                Để trống để không tác động đến mã hóa đầu vào hiện tại: (%{name})"
+        skip_header: "Không có header"
+        skip_header_help: "Không xuất header (không mô tả trường)"
+        default_col_sep: ","
+        col_sep: "Dấu phân tách cột"
+        col_sep_help: "Để trống cho ('%{value}') cơ bản" # value is default_col_sep

@@ -19,9 +19,4 @@
         <p><%= t ".booked" %></p>
       <% end %>
   </div>
-  <% if current_user&.admin? %>
-    <%= link_to [:admin, @room], :remote => true, method: :delete, data: {confirm: t(".confirm")} do %>
-      <%= t(".submit") %>
-    <% end %>
-  <% end %>
 </div>
