@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  devise :database_authenticatable, :registerable, :rememberable, :validatable
+
   attr_accessor :remember_token
 
   before_save :downcase_email
@@ -26,8 +28,6 @@ class User < ApplicationRecord
   validates :phone, length: {is: Settings.validation.phone.length},
             allow_nil: true
 
-  has_secure_password
-
   scope :customer, ->{where(role: :customer)}
   scope :new_user, (lambda do |month_ago|
     where("created_at >= ?", Time.zone.now - month_ago.months)
@@ -39,34 +39,6 @@ class User < ApplicationRecord
       format: "%b %Y"
     ).count
   end)
-
-  class << self
-    def digest string
-      min_cost = ActiveModel::SecurePassword.min_cost
-      cost = min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
-      BCrypt::Password.create string, cost: cost
-    end
-
-    def new_token
-      SecureRandom.urlsafe_base64
-    end
-  end
-
-  def remember
-    self.remember_token = User.new_token
-    update_attribute :remember_digest, User.digest(remember_token)
-  end
-
-  def authenticated? attribute, token
-    digest = send "#{attribute}_digest"
-    return false unless digest
-
-    BCrypt::Password.new(digest).is_password? token
-  end
-
-  def forget
-    update_attribute :remember_digest, nil
-  end
 
   private
   def downcase_email

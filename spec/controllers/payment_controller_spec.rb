@@ -1,14 +1,12 @@
 require "rails_helper"
-include SessionsHelper
 
 RSpec.describe PaymentsController, type: :controller do
-  let(:user) {FactoryBot.create :user}
+  let(:current_user) {FactoryBot.create :user}
   let(:room) {FactoryBot.create :room}
-  let(:booking) {FactoryBot.create :booking, user: user, room: room}
+  let(:booking) {FactoryBot.create :booking, user: current_user, room: room}
+
   describe "user access to page" do
-    before do
-      log_in user
-    end
+    before {sign_in current_user}
 
     describe "#new" do
       context "go to payments/new failed" do

@@ -72,17 +72,6 @@ en:
       title: "Latest Reviews"
       subtitle: "The article reviews from customers is the motivation
                 for us to continue to grow."
-  sessions:
-    new:
-      new_user: "New User?"
-      login: "Log in"
-      sign_up: "Sign up now!"
-      remember_me: "Remember me on this computer"
-      forgot_password: "Forgot Password?"
-    create:
-      required_activate_email: "Account not activated.
-                                Check your email for the activation link."
-      login_fail: "Invalid email/password combination"
   users:
     new:
       title: "Sign up"
@@ -219,6 +208,7 @@ en:
         phone: "Phone *"
         password: "Password *"
         password_confirmation: "Confirm Password *"
+        remember_me: "Remember me"
       room:
         room_number: "Room number *"
         room_type_id: "Room type *"

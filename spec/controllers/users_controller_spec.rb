@@ -1,9 +1,9 @@
 require "rails_helper"
-include SessionsHelper
 
 RSpec.describe UsersController, type: :controller do
-  let(:user) {FactoryBot.create :user}
-  before {log_in user}
+  let(:user){FactoryBot.create :user}
+  before {sign_in user}
+
   describe "GET /new" do
     before {get :new}
     it "should create new user" do
@@ -29,7 +29,7 @@ RSpec.describe UsersController, type: :controller do
       end
 
       it "should redirect to login path" do
-        expect(response).to redirect_to login_path
+        expect(response).to redirect_to new_user_session_path
       end
     end
 
@@ -41,7 +41,7 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   end
-  
+
   describe "PATCH /update" do
     context "when update params is valid" do
       before do

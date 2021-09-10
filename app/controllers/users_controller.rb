@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, :load_user, except: %i(new create)
+  before_action :authenticate_user!, :load_user, except: %i(new create)
   before_action :load_user, except: %i(new create)
 
   def new
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       flash[:success] = t ".success"
-      redirect_to login_path
+      redirect_to new_user_session_path
     else
       flash[:danger] = t ".fail"
       render :new

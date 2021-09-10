@@ -1,5 +1,4 @@
 require "rails_helper"
-include SessionsHelper
 
 RSpec.describe BookingsController, type: :controller do
   let(:booking){FactoryBot.create :booking}
@@ -15,7 +14,7 @@ RSpec.describe BookingsController, type: :controller do
     }
   }}
 
-  before {log_in current_user}
+  before {sign_in current_user}
 
   describe "POST /create" do
     context "when total is not numberic or nil" do

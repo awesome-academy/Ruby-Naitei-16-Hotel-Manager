@@ -9,7 +9,6 @@ RSpec.describe User, type: :model do
 
   describe "associations" do
     it {expect(user).to have_many(:bookings).dependent(:destroy)}
-    it {expect(user).to have_many(:rooms).through(:bookings)}
     it {expect(user).to have_many(:reviews).dependent(:destroy)}
     it {expect(user).to have_many(:payments).dependent(:destroy)}
   end

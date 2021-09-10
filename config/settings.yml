@@ -11,11 +11,13 @@ validation:
   email:
     length:
       max: 50
-    valid_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+    valid_regex: !ruby/regexp /\A[^@\s]+@[^@\s]+\z/
     pwd_reset_expired_hours: 2
   password:
     length:
       min: 6
+      max: 128
+    reset: 6
   phone:
     length: 10
   description:
@@ -41,6 +43,7 @@ user:
     email: "tatuan19@gmail.com"
     password: "123456"
   faker:
+    email: "example9999@gmail.com"
     password: "password"
 room_types:
   max_in_rows: 4
