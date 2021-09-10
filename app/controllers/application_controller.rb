@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_user
-    @user = User.find_by id: params[:id]
+    @user = User.find_by slug: params[:id]
     return if @user
 
     flash[:danger] = t "error.not_found"

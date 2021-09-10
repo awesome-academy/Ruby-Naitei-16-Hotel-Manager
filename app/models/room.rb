@@ -4,6 +4,9 @@ class Room < ApplicationRecord
   has_many :reviews, as: :commentable, dependent: :destroy
   belongs_to :room_type
 
+  extend FriendlyId
+  friendly_id :room_number, use: :slugged
+
   ROOM_PERMITTED = %i(room_number description room_type_id).freeze
 
   validates :room_number, presence: true
@@ -21,5 +24,9 @@ class Room < ApplicationRecord
     edit do
       exclude_fields :bookings, :users, :reviews
     end
+  end
+
+  def normalize_friendly_id text
+    ["room", text].join("-")
   end
 end

@@ -4,6 +4,6 @@ module RoomsHelper
   end
 
   def show_room room
-    t(".title") + room.room_number
+    t("rooms.show.title") + room.room_number
   end
 end

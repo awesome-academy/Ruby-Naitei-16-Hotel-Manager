@@ -8,6 +8,7 @@ RSpec.describe User, type: :model do
   end
 
   describe "associations" do
+    before {user}
     it {expect(user).to have_many(:bookings).dependent(:destroy)}
     it {expect(user).to have_many(:reviews).dependent(:destroy)}
     it {expect(user).to have_many(:payments).dependent(:destroy)}

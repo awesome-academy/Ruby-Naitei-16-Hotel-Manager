@@ -2,12 +2,12 @@
   <div class="accomodation_item text-center">
     <div class="hotel_img">
       <%= image_tag room_type.images.first if room_type.images.attached? %>
-      <%= link_to link_address(local_assigns[:origin], room_type.id),
+      <%= link_to link_address(local_assigns[:origin], room_type.slug),
                   class: "btn theme_btn button_hover" do %>
         <%= t ".#{link_address_i18n(local_assigns[:origin])}" %>
       <% end %>
     </div>
-    <%= link_to "#" do %>
+    <%= link_to room_type do %>
       <h4 class="sec_h4"><%= room_type.name %></h4>
     <% end %>
     <h6>

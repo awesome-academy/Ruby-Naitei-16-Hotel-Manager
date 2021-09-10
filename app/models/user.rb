@@ -3,6 +3,9 @@ class User < ApplicationRecord
 
   attr_accessor :remember_token
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   before_save :downcase_email
 
   has_many :bookings, dependent: :destroy
