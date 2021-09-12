@@ -18,6 +18,8 @@
       <% end %>
       <p></p>
       <%= render "devise/shared/links" %>
+      <%= link_to t(".login_fb"), user_facebook_omniauth_authorize_path, method: :post %><br>
+      <%= link_to t(".login_gg"), user_google_oauth2_omniauth_authorize_path, method: :post %>
     </div>
   </div>
 </div>

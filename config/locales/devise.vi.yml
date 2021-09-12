@@ -46,6 +46,8 @@ vi:
     sessions:
       new:
         login: "Đăng nhập"
+        login_fb: "Đăng nhập với fb"
+        login_gg: " Đăng nhập với gg"
       signed_in: "Đăng nhập thành công."
       signed_out: "Đăng xuất thành công."
       already_signed_out: "Đăng xuất thành công."

@@ -81,6 +81,7 @@ vi:
     form:
       male: "Nam"
       female: "Nữ"
+      nil: ""
       select: "Chọn giới tính "
       submit: "Đăng kí"
     edit:
