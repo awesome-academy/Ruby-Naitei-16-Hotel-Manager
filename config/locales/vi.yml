@@ -119,37 +119,33 @@ vi:
       no_payment: "Không có hóa đơn nào"
   rooms:
     show:
-      title: "Phòng "
-      type: "Kiểu phòng: "
+      room: "Phòng "
       bed: "Số giường: "
-      air_conditioner: "Có điều hòa"
+      air_conditioner: "Điều hòa: "
       cost: "Giá: "
-      can_book: "Có thể đặt phòng"
-      book: "Đặt phòng này"
-      booked: "Đã đặt"
       per_day: "$/ngày"
       not_found: "Không tìm thấy phòng này"
-      confirm: "Bạn có chắc không"
-      submit: "Xóa phòng"
-    warning: "Bạn không có quyền truy cập trang này"
-    invalid_format: "Bạn chỉ có thể tải lên ảnh"
-    required_size: "Kích cỡ tối đa của ảnh là 5MB"
+      description: "Mô tả"
+      yes_t: "Có"
+      no_t: "Không"
   room_types:
     show:
-      title: "Kiểu phòng "
+      title: "Phòng "
       not_found: "Không tìm thấy kiểu phòng"
       bed: "Số giường: "
-      air_conditioner: "Có điều hòa"
+      air_conditioner: "Điều hòa: "
       cost: "Giá: "
       per_day: "$/ngày"
-      can_book: "Có thể đặt phòng"
+      available_rooms: "Số phòng trống: "
       book: "Đặt kiểu phòng này"
       booked: "Hiện tại đã hết phòng có kiểu phòng này"
       list: "Danh sách phòng trống"
       confirm: "Bạn có chắc không"
       submit: "Xóa kiểu phòng"
+      description: "Mô tả"
+      yes_t: "Có"
+      no_t: "Không"
     room_type:
-      book_now: "Đặt ngay"
       night: "đêm"
       details: "Chi tiết"
       remaining: "còn lại"
@@ -197,6 +193,9 @@ vi:
       cash: "Tiền mặt"
       room: "Phòng"
       no_booking_to_checkout: "Không có đơn cần thanh toán!"
+    create:
+      success: "Checkout thành công!"
+      fail: "Có lỗi xảy ra! Checkout thất bại!"
   helpers:
     label:
       session:
@@ -255,32 +254,33 @@ vi:
                 những người trẻ.
                 Cuộc sống đang trở nên cực kỳ nhanh chóng."
       out_of_room: "hết phòng"
-      search: "Tìm kiếm"
+      search_btn: "Tìm kiếm"
+      search: "Tìm kiếm theo tên loại phòng ..."
     booking_form:
-      arrival: "Ngày tới"
-      departure: "Ngày về"
+      checkin: "Checkin"
+      checkout: "Checkout"
       room_type: "-- Chọn Loại Phòng --"
       number: "-- Chọn số lượng --"
       book_now: "Đặt ngay"
       book: "Đặt"
       your_room: "phòng"
+  rails_admin:
+    main:
+      statistics:
+        total_customer: "Tổng số khách hàng: "
+        user_chart_title: "Lượng người dùng mới gần đây"
+        total_revenue: "Tổng doanh thu trong 6 tháng qua: "
+        room_type_revenue: "Doanh thu theo loại phòng: "
+        rt_revenue_chart: "Doanh thu"
+        rt_booking_chart: "Đặt phòng"
+        room: " phòng"
+        customer: " khách hàng"
+        recent_revenue: "Doanh thu gần đây"
+        user_chart_x: "Tháng"
+        user_chart_y: "Khách hàng Mới"
+        revenue_x: "Tháng"
+        revenue_y: "Doanh thu"
   admin:
-    rails_admin:
-      main:
-        statistics:
-          total_customer: "Tổng số khách hàng: "
-          user_chart_title: "Lượng người dùng mới gần đây"
-          total_revenue: "Tổng doanh thu trong 6 tháng qua: "
-          room_type_revenue: "Doanh thu theo loại phòng: "
-          rt_revenue_chart: "Doanh thu"
-          rt_booking_chart: "Đặt phòng"
-          room: " phòng"
-          customer: " khách hàng"
-          recent_revenue: "Doanh thu gần đây"
-          user_chart_x: "Tháng"
-          user_chart_y: "Khách hàng Mới"
-          revenue_x: "Tháng"
-          revenue_y: "Doanh thu"
     js:
       true: True
       false: False

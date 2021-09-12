@@ -116,6 +116,13 @@ button:focus {
   margin-right: 8.33333333%;
 }
 
+.modal-xl {
+  width: 50%;
+}
+
+.status-btn {
+  width: 150px;
+}
 
 /* ==== Predefine end ====*/
 .flash-alert {
@@ -235,64 +242,5 @@ input {
 
   input {
     left: -90px;
-  }
-}
-
-#session_remember_me {
-  margin-left: 0;
-  width: auto;
-}
-
-.large-padding-top {
-  padding-top: 100px;
-}
-
-/* scroll only image path*/
-.wrapper {
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  flex-flow: row no-wrap;
-  justify-content: space-around;
-  overflow-y: scroll;
-
-  .content {
-    margin: 0 auto;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    li {
-      list-style-type: none;
-    }
-  }
-
-  .vertical-line-x {
-    width: 500px;
-    height: 0px;
-    float: left;
-    border: 1px inset;
-    background-color: $light_gray;
-  }
-
-  .vertical-line-y {
-    width: 0px;
-    height: 500px;
-    float: left;
-    border: 1px inset;
-    background-color: $light_gray;
-  }
-}
-
-.users {
-  list-style: none;
-  margin: 0;
-
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
   }
 }

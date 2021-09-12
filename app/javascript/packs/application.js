@@ -9,6 +9,9 @@ import * as ActiveStorage from '@rails/activestorage'
 import 'channels'
 require('jquery')
 import 'bootstrap'
+global.toastr = require('toastr')
+import '../stylesheets/application'
+
 require('./custom')
 
 Rails.start()

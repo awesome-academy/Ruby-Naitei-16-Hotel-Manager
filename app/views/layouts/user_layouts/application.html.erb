@@ -14,15 +14,10 @@
   <body>
     <%= render "layouts/user_layouts/header" %>
     <div class="content-area">
-      <% flash.each do |message_type, message| %>
-        <% if message_type == "notice" %>
-          <div class="flash-alert alert alert-success">
-        <% elsif message_type == "alert" %>
-          <div class="flash-alert alert alert--danger">
-        <% else %>
-          <div class="flash-alert alert alert-<%= message_type %>">
+      <%= content_tag(:script) do %>
+        <% flash.each do |type, message| %>
+          <%= toastr_flash_class("#{type}") %>('<%= message %>')
         <% end %>
-        <%= message %></div>
       <% end %>
       <%= yield %>
     </div>
