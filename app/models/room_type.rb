@@ -2,6 +2,9 @@ class RoomType < ApplicationRecord
   has_many :rooms, dependent: :destroy
   accepts_nested_attributes_for :rooms, allow_destroy: true
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   has_many_attached :images
   ROOMTYPE_PERMITTED = %i(name cost bed_num air_conditioner description).freeze
 
@@ -27,4 +30,9 @@ class RoomType < ApplicationRecord
       .group(:id)
       .order(available_number: :desc)
   end)
+
+  def normalize_friendly_id text
+    room_type_code = text.split(" ").last[1..-2]
+    ["room", "type", room_type_code].join("-")
+  end
 end

@@ -28,7 +28,7 @@
       <h1><%= t ".list" %></h1>
       <% @rooms.each do |room| %>
         <li>
-          <%= link_to show_room(room), admin_room_path(room) %><br />
+          <%= link_to show_room(room), room %><br />
           <%= room.description %><br />
           <div class="vertical-line-x"></div>
           <br />
@@ -37,8 +37,3 @@
     </ul>
   </div>
 </div>
-<% if current_user&.admin? %>
-  <%= link_to [:admin, @room_type], :remote => true, method: :delete, data: {confirm: t(".confirm")} do %>
-    <%= t(".submit") %>
-  <% end %>
-<% end %>

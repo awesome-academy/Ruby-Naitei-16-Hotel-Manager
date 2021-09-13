@@ -5,7 +5,7 @@ RSpec.describe RoomTypesController, type: :controller do
   describe "GET /show" do
     context "when room type exist" do
       it "should redirect to room type page" do
-        get :show, params: {id: room_type.id}
+        get :show, params: {id: room_type.slug}
         expect(assigns(:room_type)).to eq(room_type)
       end
     end
