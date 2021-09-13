@@ -6,12 +6,20 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def show
+  def show; end
+
+  def show_bookings
     @q_booking = @user.bookings.joins(room: :room_type).ransack(params[:q])
+    @all_bookings = @q_booking.result
+    @all_bookings = @all_bookings.order(params[:q][:s]) if params[:q]
+    @bookings = @all_bookings.page(params[:page]).per(5)
+  end
+
+  def show_payments
     @q_payment = @user.payments.ransack(params[:q])
-    @bookings = @q_booking.result
-    @payments = @q_payment.result
-    sort_booking_and_payment
+    @all_payments = @q_payment.result
+    @all_payments = @all_payments.order(params[:q][:s]) if params[:q]
+    @payments = @all_payments.page(params[:page]).per(5)
   end
 
   def create
@@ -40,12 +48,5 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit User::PERMITTED
-  end
-
-  def sort_booking_and_payment
-    return unless params[:q] && params[:q][:s]
-
-    @payments = @payments.order(params[:q][:s])
-    @bookings = @bookings.order(params[:q][:s])
   end
 end

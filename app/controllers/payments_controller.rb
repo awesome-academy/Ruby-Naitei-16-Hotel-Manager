@@ -7,14 +7,14 @@ class PaymentsController < ApplicationController
     return if @non_checkout_bookings.present?
 
     flash[:danger] = t ".no_booking_to_checkout"
-    redirect_to current_user
+    redirect_to book_user_path(current_user)
   end
 
   def create
     @payment = current_user.payments.new payment_params
     if @payment.save
       flash[:success] = t ".success"
-      redirect_to current_user
+      redirect_to payment_user_path(current_user)
     else
       flash[:danger] = t ".fail"
       render :new

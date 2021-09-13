@@ -9,13 +9,12 @@ class BookingsController < ApplicationController
   def show; end
 
   def create
-    params[:booking].except(:total, :room_type)
     if Booking.create_bookings params, @booked_room_ids, current_user.id
       flash[:success] = t ".success"
-      redirect_to current_user
+      redirect_to book_user_path(current_user)
     else
       flash[:danger] = t ".fail"
-      redirect_to book_path
+      redirect_to book_path(booking: book_data)
     end
   end
 
@@ -82,5 +81,9 @@ class BookingsController < ApplicationController
 
     flash[:danger] = t ".errors.not_found"
     redirect_to current_user
+  end
+
+  def book_data
+    params[:booking].permit(:checkin, :checkout).to_enum.to_h
   end
 end

@@ -43,6 +43,12 @@
                   <%= link_to t(".profile"), current_user, class: "nav-link" %>
                 </li>
                 <li class="nav-item">
+                  <%= link_to t(".show_bookings"), book_user_path(current_user), class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to t(".show_payments"), payment_user_path(current_user), class: "nav-link" %>
+                </li>
+                <li class="nav-item">
                   <%= link_to t(".setting"), edit_user_path(current_user), class: "nav-link" %>
                 </li>
                 <li class="nav-item">

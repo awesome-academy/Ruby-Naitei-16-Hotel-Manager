@@ -17,8 +17,8 @@
       <div class="col-md-2"></div>
     </div>
     <div class="row mb_30">
-      <% if @room_types.any? %>
-        <%= render @room_types %>
+      <% if @search_room_types.any? %>
+        <%= render @search_room_types %>
       <% else %>
         <p class="text-center out-room"><%= t ".out_of_room" %></p>
       <% end %>

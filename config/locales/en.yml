@@ -40,6 +40,8 @@ en:
         logout: "Log out"
         account: "Account"
         login: "Log in"
+        show_bookings: "Booking list"
+        show_payments: "Payment list"
       footer:
         about_us: "About us"
         about_descrip: "We provide a luxorious stay with various value
@@ -96,6 +98,7 @@ en:
       email: "Email: "
       gender: "Gender: "
       phone: "Phone number: "
+    show_bookings:
       bookings_title: "Booking List"
       bookings_subtitle: "We all live in an age that belongs to the young at heart.
                 Life that is becoming extremely fast."
@@ -108,6 +111,8 @@ en:
       total: "Total"
       edit: "Edit"
       cancel: "Cancel"
+      no_booking: "No bookings yet"
+    show_payments:
       bills_title: "Bills List"
       bills_subtitle: "We all live in an age that belongs to the young at heart.
                 Life that is becoming extremely fast."
@@ -115,7 +120,6 @@ en:
       created_date: "Created Date"
       total: "Total"
       is_paid: "Status"
-      no_booking: "No bookings yet"
       no_payment: "No bill"
   rooms:
     show:

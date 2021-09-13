@@ -1,5 +1,5 @@
 <tr id="booking-<%= booking.id %>">
-  <td><%= link_to booking.room_number, room_path(booking.room_id),
+  <td><%= link_to booking.room_number, booking.room,
         {remote: true, "data-toggle": "modal", "data-target": "#room-modal"} %>
   </td>
   <div id="room-modal" class="modal fade" role="dialog"></div>

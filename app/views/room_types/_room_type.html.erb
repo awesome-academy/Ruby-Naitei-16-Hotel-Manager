@@ -1,8 +1,8 @@
-<div class="col-lg-3 col-sm-6" id="room-type-<%= room_type.id %>">
+<div class="col-lg-3 col-sm-6" id=<%= room_type.slug %>>
   <div class="accomodation_item text-center">
     <div class="hotel_img">
       <%= image_tag room_type.images.first if room_type.images.attached? %>
-      <%= link_to t(".details"), room_type_path(room_type.id),
+      <%= link_to t(".details"), room_type,
         {remote: true, "data-toggle": "modal", "data-target": "#roomtype-modal", class: "btn theme_btn button_hover"} %>
     </div>
     <div id="roomtype-modal" class="modal fade" role="dialog"></div>

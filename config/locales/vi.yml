@@ -10,7 +10,7 @@ vi:
     admin_layouts:
       header:
         hello: "Chào chủ nhân"
-        profile: "THông tin"
+        profile: "Thông tin"
         setting: "Cài đặt"
         logout: "Đăng xuất"
         users: "Người dùng"
@@ -42,6 +42,8 @@ vi:
         logout: "Đăng xuất"
         account: "Tài khoản"
         login: "Đăng nhập"
+        show_bookings: "Danh sách đặt phòng"
+        show_payments: "Danh sách thanh toán"
       footer:
         about_us: "Về chúng tôi"
         about_descrip: "Chúng tôi cung cấp một trải nghiệm về
@@ -96,6 +98,7 @@ vi:
       email: "Email: "
       gender: "Giới tính: "
       phone: "Số điện thoại: "
+    show_bookings:
       bookings_title: "Danh sách đặt phòng"
       bookings_subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về
                 những người trẻ.
@@ -109,14 +112,15 @@ vi:
       total: "Tổng"
       edit: "Chỉnh sửa"
       cancel: "Hủy"
+      no_booking: "Không có đơn đặt phòng nào"
+    show_payments:
       bills_title: "Danh sách thanh toán"
       bills_subtitle: "Tất cả chúng ta đang sống trong một thời đại thuộc về tuổi trẻ.
                  Cuộc sống đang trở nên cực kỳ nhanh chóng. "
       bill_id: "ID"
       created_date: "Ngày tạo"
-      tổng số: "Tổng số"
+      total: "Tổng số"
       is_paid: "Trạng thái"
-      no_booking: "Không có đơn đặt phòng nào"
       no_payment: "Không có hóa đơn nào"
   rooms:
     show:

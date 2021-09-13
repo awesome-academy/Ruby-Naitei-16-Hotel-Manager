@@ -1,0 +1,30 @@
+<% provide :title, t(".bills_title") %>
+<%= render "shared/breadcrumb" %>
+  <section class="bills_list_area section_gap">
+    <div class="container">
+      <div class="section_title text-center">
+        <p><%= t ".bills_subtitle" %></p>
+      </div>
+      <div class="card shadow">
+        <div class="table-responsive">
+          <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+              <th><%= sort_link @q_payment, :id, t(".bill_id") %></th>
+              <th><%= sort_link @q_payment, :created_at, t(".created_date") %></th>
+              <th><%= sort_link @q_payment, :amount, t(".total") %></th>
+              <th><%= sort_link @q_payment, :is_paid, t(".is_paid") %></th>
+            </thead>
+            <tbody>
+              <% if @payments.any? %>
+                <%= render @payments %>
+              <% else %>
+                <p class="text-center no-record"><%= t ".no_payment" %></p>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <%= paginate @payments %>
+      </div>
+    </div>
+  </section>
+</div>
