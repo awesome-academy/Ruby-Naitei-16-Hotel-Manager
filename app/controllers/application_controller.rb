@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   layout "layouts/user_layouts/application"
   before_action :set_locale
 
+  def after_sign_in_path_for _resource
+    current_user.customer? ? root_url : rails_admin.dashboard_path
+  end
+
   private
   rescue_from CanCan::AccessDenied do
     render file: Settings.not_found_page, status: :not_found, layout: false

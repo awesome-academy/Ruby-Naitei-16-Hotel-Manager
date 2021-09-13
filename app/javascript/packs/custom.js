@@ -1,8 +1,9 @@
-$(document).on('turbolinks:load', function () {
-  setTimeout(function () {
-    $('.flash-alert').remove();
-  }, 1500);
+toastr.options = Object.assign({}, toastr.options, {
+  closeButton: true,
+  progressBar: true
+});
 
+$(document).on('turbolinks:load', function () {
   $('#booking_total').prop('disabled', true); // second dropdown is disable while first dropdown is empty
   $('#booking_room_type').change(function () {
     let room_type = $(this).val();

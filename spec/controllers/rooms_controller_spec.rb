@@ -6,8 +6,8 @@ RSpec.describe RoomsController, type: :controller do
   describe "GET /show" do
     context "when room exist" do
       it "should redirect to room page" do
-        get :show, params: {id: room.slug}
-        expect(assigns(:room)).to eq(room)
+        get :show, params: {id: room.slug}, xhr: true
+        expect(response.content_type).to eq "text/javascript; charset=utf-8"
       end
     end
 

@@ -56,6 +56,67 @@
       font-size: 16px;
     }
   }
+
+  /* roomtype-modal */
+  #roomtype-modal {
+    text-align: left;
+
+    .modal-header {
+      text-align: center;
+      background-color: $yellow;
+      color: $white;
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    .modal-body {
+      padding: 20px 30px 20px 20px;
+    }
+
+    .pro-img-details img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .pro-img-list {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .pro-img-list img{
+      width: 31%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .rt-info {
+      background-color: $white_smoke;
+      border-radius: 8px;
+      padding-bottom: 10px;
+      min-height: 460px;
+    }
+
+    .number {
+      color: $red;
+    }
+
+    .available {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.search-bar {
+  margin-bottom: 50px;
+  line-height: 2.5em;
+
+  .submit-btn {
+    background-color: $dark_blue;
+    font-weight: 500;
+  }
 }
 
 .sec_h4 {
@@ -100,6 +161,16 @@
 }
 
 .book_tabel_item {
+  .label-item {
+    margin-bottom: 10px;
+    line-height: 38px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: bold;
+  }
+
+
   .form-group {
     margin-bottom: 0px;
 

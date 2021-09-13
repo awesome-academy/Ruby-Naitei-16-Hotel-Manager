@@ -2,5 +2,9 @@
   <td><%= link_to payment.id, "#" %></td>
   <td><%= format_date_time payment.created_at %></td>
   <td><%= payment.amount %> <%= t "currency" %></td>
-  <td><%= paid_to_text payment.is_paid %></td>
+  <td>
+    <button type="button" class="btn status-btn <%= status_btn_color payment.is_paid %>">
+      <%= paid_to_text payment.is_paid %></td>
+    </button>
+  </td>
 </tr>

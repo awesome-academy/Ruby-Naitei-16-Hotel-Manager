@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_09_09_234214) do
 
-  create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
+  create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", charset: "utf8", force: :cascade do |t|
+  create_table "active_storage_blobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", charset: "utf8", force: :cascade do |t|
+  create_table "active_storage_variant_records", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "bookings", charset: "utf8", force: :cascade do |t|
+  create_table "bookings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "room_id", null: false
     t.bigint "user_id", null: false
     t.datetime "checkin"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "payments", charset: "utf8", force: :cascade do |t|
+  create_table "payments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.float "amount"
     t.datetime "payment_date"
     t.boolean "is_paid", default: false
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
-  create_table "reviews", charset: "utf8", force: :cascade do |t|
+  create_table "reviews", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "commentable_type", null: false
     t.bigint "commentable_id", null: false
     t.text "comment"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.index ["commentable_type", "commentable_id"], name: "index_reviews_on_commentable"
   end
 
-  create_table "room_types", charset: "utf8", force: :cascade do |t|
+  create_table "room_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.float "cost"
     t.integer "bed_num"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.string "slug"
   end
 
-  create_table "rooms", charset: "utf8", force: :cascade do |t|
+  create_table "rooms", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "room_number"
     t.text "description"
     t.boolean "is_available", default: true
@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.index ["room_type_id"], name: "index_rooms_on_room_type_id"
   end
 
-  create_table "users", charset: "utf8", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "encrypted_password"
@@ -109,8 +109,8 @@ ActiveRecord::Schema.define(version: 2021_09_09_234214) do
     t.datetime "activated_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "slug"
     t.datetime "remember_created_at"
+    t.string "slug"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

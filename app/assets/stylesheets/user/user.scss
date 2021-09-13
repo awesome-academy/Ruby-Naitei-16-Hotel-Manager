@@ -23,6 +23,69 @@
   .checkout-btn {
     margin-top: 20px;
   }
+
+  /* room-modal */
+  #room-modal {
+    text-align: left;
+
+    .modal-header {
+      text-align: center;
+      background-color: $dark_blue;
+      color: $white;
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .pro-img-details img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .pro-img-list {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .pro-img-list img{
+      width: 31%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .info {
+      padding-left: 0px;
+    }
+
+    .rt-info, .room-info {
+      background-color: $white_smoke;
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    .rt-info {
+      min-height: 250px;
+    }
+
+    .room-info {
+      margin-top: 10px;
+      min-height: 200px;
+    }
+
+    .number {
+      color: $red;
+    }
+
+    .available {
+      font-size: 1.2em;
+    }
+  }
 }
 
 .bills_list_area {

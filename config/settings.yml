@@ -47,7 +47,7 @@ user:
     password: "password"
 room_types:
   max_in_rows: 4
-  image_size: "500x500"
+  image_size: "200x200"
 seed:
   lorem: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
   room_types:

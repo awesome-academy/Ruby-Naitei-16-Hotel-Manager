@@ -1,39 +1,47 @@
-<% provide :title, show_room_type %>
-<%= render "shared/breadcrumb" %>
-<div class="wrapper large-padding-top">
-  <div class="content">
-    <h1><%= show_room_type %><br /></h1>
-    <ul>
-      <li><%= @room_type.description %></li>
-      <li><%= t ".bed" %><%= @room_type.bed_num %></li>
-      <% if @room_type.air_conditioner %>
-        <li><%= t ".air_conditioner" %></li>
-      <% end %>
-      <li><%= t ".cost" %><%= @room_type.cost %><%= t ".per_day" %></li>
-    </ul>
-    <% @room_type.images.each do |image| %>
-      <%= image_tag display_image(image) %> <br />
-    <% end %>
-
-    <% if @rooms.present? %>
-      <p><%= t ".can_book" %></p>
-      <%= link_to t(".book"), book_path, class: "btn btn-primary" %>
-    <% else %>
-      <p><%= t ".booked" %></p>
-    <% end %>
-  </div>
-  <div class="vertical-line-y"></div>
-  <div class="content">
-    <ul class="rooms">
-      <h1><%= t ".list" %></h1>
-      <% @rooms.each do |room| %>
-        <li>
-          <%= link_to show_room(room), room %><br />
-          <%= room.description %><br />
-          <div class="vertical-line-x"></div>
-          <br />
-        </li>
-      <% end %>
-    </ul>
+<div class="modal-dialog modal-xl">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title" id="myModalLabel"><%= show_room_type %></h4>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="pro-img-details">
+            <%= image_tag @room_type.images.first %> <br />
+          </div>
+          <div class="pro-img-list">
+            <% @room_type.images[1..3].each do |image| %>
+              <%= image_tag image %> <br />
+            <% end %>
+          </div>
+        </div>
+        <div class="rt-info col-md-5">
+          <h4><%= t ".description" %></h4>
+          <p><%= @room_type.description %></p>
+          <hr>
+          <div class="row">
+            <strong class="col-md-6"><%= t ".bed" %></strong>
+            <div class="number col-md-6"><%= @room_type.bed_num %></div>
+          </div>
+          <div class="row">
+            <strong class="col-md-6"><%= t ".air_conditioner" %></strong>
+            <div class="number col-md-6"><%= boolean_to_text @room_type.air_conditioner %></div>
+          </div>
+          <hr>
+          <div class="row">
+            <strong class="col-md-6"><%= t ".cost" %></strong>
+            <div class="number col-md-6"><%= @room_type.cost %><%= t ".per_day" %></div>
+          </div>
+          <div class="row">
+            <strong class="col-md-6"><%= t ".available_rooms" %></strong>
+            <strong class="number col-md-6 available"><%= @rooms.count %></strong>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
