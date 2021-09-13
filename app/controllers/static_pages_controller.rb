@@ -3,11 +3,12 @@ class StaticPagesController < ApplicationController
   before_action :set_search
 
   def home
-    @room_types = @q.result.limit(Settings.room_types.max_in_rows)
+    @search_room_types = @q.result.limit(Settings.room_types.max_in_rows)
   end
 
   def user_booking
-    @room_types = @q.result
+    params[:booking] ||= {}
+    @search_room_types = @q.result
     @booking = Booking.new
   end
 
@@ -15,6 +16,7 @@ class StaticPagesController < ApplicationController
 
   private
   def set_search
-    @q = RoomType.most_available.ransack(name_cont: params[:search_key])
+    @room_types = RoomType.most_available
+    @q = @room_types.ransack(name_cont: params[:search_key])
   end
 end

@@ -1,0 +1,37 @@
+<% provide :title, t(".bookings_title") %>
+<%= render "shared/breadcrumb" %>
+  <section class="booking_list_area section_gap">
+    <div class="container">
+      <div class="section_title text-center">
+        <p><%= t ".bookings_subtitle" %></p>
+        <div class="checkout-btn"><%= link_to t(".checkout"), new_payment_path, class: "view_btn button_hover" %></div>
+      </div>
+      <div class="card shadow">
+        <div class="table-responsive">
+          <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+              <th><%= sort_link @q_booking, :room_number, t(".room_number") %></th>
+              <th><%= sort_link @q_booking, :name, t(".room_type") %></th>
+              <th><%= sort_link @q_booking, :created_at, t(".booking_date") %></th>
+              <th><%= sort_link @q_booking, :checkin, t(".checkin") %></th>
+              <th><%= sort_link @q_booking, :checkout, t(".checkout") %></th>
+              <th><%= t ".total" %></th>
+              <th><%= sort_link @q_booking, :is_checkout, t(".is_checkout") %></th>
+              <th><%= t ".edit" %></th>
+              <th><%= t ".cancel" %></th>
+            </thead>
+            <tbody>
+              <% if @bookings.any? %>
+                <%= render @bookings %>
+              <% else %>
+                <p class="text-center no-record"><%= t ".no_booking" %></p>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <%= paginate @bookings %>
+      </div>
+    </div>
+    <div id="booking-modal" class="modal fade"></div>
+  </section>
+</div>
