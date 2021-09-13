@@ -46,6 +46,8 @@ en:
     sessions:
       new:
         login: "Log in"
+        login_fb: "Login with facebook"
+        login_gg: "Login with google "
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."

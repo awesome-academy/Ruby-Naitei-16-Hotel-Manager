@@ -43,6 +43,7 @@ yarn-debug.log*
 .framgia-ci-result.temp.yml
 /config/database.yml
 /config/credentials.yml.enc
+/config/application.yml
 
 /test/
 
